@@ -1,55 +1,30 @@
-AWS Machine Learning Foundations
-================================
+# AWS Machine Learning Foundations
 
-AWS Machine Learning Foundations Nanodegree Program
+## AWS Machine Learning Foundations Nanodegree Program
+## AWS Machine Learning Engineer Scholarship Program
+  
 
-Project Organization
---------------------
+## Repository with the tasks and demonstrations from AWS Machine Learning Foundations.  
 
-    ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
-    │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-    │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
-    │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
-    │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
-    │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+## Course information:  
+
+### Study machine learning techniques and algorithms, programming best practices, python coding, and Amazon AI Services and Amazon AI Devices, including Amazon SageMaker and Amazon DeepComposer. The foundations course is intended to help developers of all skill levels get started with machine learning..  
+ 
+
+## Topics include:  
 
 
+1. Welcome to the AWS Machine Learning Foundations Course. 
+2. Introduction to Machine Learning. 
+3. Machine Learning with AWS.
+4. Software Engineering Practices, Part 1 
+5. Software Engineering Practices, Part 2
+6. Introduction to Object-Oriented Programming 
 
+
+### AWS and Udacity are collaborating to educate developers of all skill levels on machine learning concepts. We invite students 18 years of age or older who are interested in expanding their machine learning skills and expertise to enroll in the AWS Machine Learning Scholarship Program. The goal for this program is to up-level machine learning skills to all, and to cultivate the next generation of ML leaders across the world, with a focus on underrepresented groups. Through its We Power Tech Program, AWS collaborates with professional organizations that are leading initiatives to increase the diversity and talent in technical roles, including organizations like Girls In Tech and the National Society of Black Engineers.
+
+
+## Course link
+
+https://www.udacity.com/course/aws-machine-learning-foundations--ud090
