@@ -1,5 +1,10 @@
 # AWS Machine Learning Foundations
 
+<img style="float: center;" src="reports/figures/AWS_Machine_Learning_Scholarship_Winner_Badge.png" width="40%"> 
+
+
+
+
 ## - AWS Machine Learning Foundations Nanodegree Program
 ## - AWS Machine Learning Engineer Scholarship Program
   
