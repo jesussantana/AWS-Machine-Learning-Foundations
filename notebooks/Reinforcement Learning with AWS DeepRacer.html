@@ -1,0 +1,2746 @@
+<!DOCTYPE html>
+<!-- saved from url=(0226)https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/8b79bd0c-6a77-40bc-8f96-b669c36d6103/concepts/b2bc0827-6d2c-4f9b-a7cc-a64d0e1dbc44 -->
+<html lang="en" class="cookies cors history json video websockets es6object fetch localstorage"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style class="vjs-styles-defaults">
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
+
+      .vjs-fluid {
+        padding-top: 56.25%
+      }
+    </style><meta name="viewport" content="width=device-width,initial-scale=1"><title>AWS Machine Learning Foundations - Udacity</title><link rel="stylesheet" href="./Reinforcement Learning with AWS DeepRacer_files/fonts.min.css"><link rel="stylesheet" href="./Reinforcement Learning with AWS DeepRacer_files/katex.min.css" crossorigin="anonymous"><meta name="Baiduspider" content="nofollow"><meta name="Baiduspider" content="noarchive"><link rel="apple-touch-icon" href="https://classroom.udacity.com/touch-icon.png"><link rel="manifest" href="https://classroom.udacity.com/manifest.json"><script type="text/javascript" id="www-widgetapi-script" src="./Reinforcement Learning with AWS DeepRacer_files/www-widgetapi.js" async=""></script><script type="text/javascript" src="./Reinforcement Learning with AWS DeepRacer_files/2059d2614a"></script><script src="./Reinforcement Learning with AWS DeepRacer_files/nr-spa-1099.min.js"></script><script type="text/javascript" async="" src="./Reinforcement Learning with AWS DeepRacer_files/linkid.js"></script><script type="text/javascript" async="" src="./Reinforcement Learning with AWS DeepRacer_files/amplitude-5.2.2-min.gz.js"></script><script type="text/javascript" async="" src="./Reinforcement Learning with AWS DeepRacer_files/analytics.js"></script><script type="text/javascript" async="" src="./Reinforcement Learning with AWS DeepRacer_files/av16vnft"></script><script type="text/javascript" async="" src="./Reinforcement Learning with AWS DeepRacer_files/blueshift.js"></script><script type="text/javascript" async="" src="./Reinforcement Learning with AWS DeepRacer_files/analytics.min.js"></script><script>window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(21),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{l?l-=1:o(s||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:c.now();i("err",[t,n])}var i=t("handle"),a=t(22),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError",l=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(13),t(12),"addEventListener"in window&&t(6),c.xhrWrappable&&t(14),d=!0)}s.on("fn-start",function(t,e,n){d&&(l+=1)}),s.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),s.on("fn-end",function(){d&&!this.thrown&&l>0&&(l-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(){M++,N=y.hash,this[u]=g.now()}function o(){M--,y.hash!==N&&i(0,!0);var t=g.now();this[h]=~~this[h]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+y,e])}function a(t,e){t.on(e,function(){this[e]=g.now()})}var s="-start",c="-end",f="-body",u="fn"+s,d="fn"+c,p="cb"+s,l="cb"+c,h="jsTime",m="fetch",v="addEventListener",w=window,y=w.location,g=t("loader");if(w[v]&&g.xhrWrappable){var b=t(10),x=t(11),E=t(8),O=t(6),P=t(13),R=t(7),T=t(14),L=t(9),j=t("ee"),S=j.get("tracer");t(15),g.features.spa=!0;var N,M=0;j.on(u,r),j.on(p,r),j.on(d,o),j.on(l,o),j.buffer([u,d,"xhr-done","xhr-resolved"]),O.buffer([u]),P.buffer(["setTimeout"+c,"clearTimeout"+s,u]),T.buffer([u,"new-xhr","send-xhr"+s]),R.buffer([m+s,m+"-done",m+f+s,m+f+c]),E.buffer(["newURL"]),b.buffer([u]),x.buffer(["propagate",p,l,"executor-err","resolve"+s]),S.buffer([u,"no-"+u]),L.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(T,"send-xhr"+s),a(j,"xhr-resolved"),a(j,"xhr-done"),a(R,m+s),a(R,m+"-done"),a(L,"new-jsonp"),a(L,"jsonp-end"),a(L,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,!0),w[v]("load",i,!0),w[v]("popstate",function(){i(0,M>1)},!0)}},{}],5:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(13),s=t(12),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",p="resource",l="-start",h="-end",m="fn"+l,v="fn"+h,w="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(8);var b=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof b&&(this.bstStart=g.now())}),o.on(v,function(t,e){var n=t[0];n instanceof b&&i("bst",[n,e,this.bstStart,g.now()])}),a.on(m,function(t,e,n){this.bstStart=g.now(),this.bstType=n}),a.on(v,function(t,e){i(w,[e,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(v,function(t,e){i(w,[e,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+l,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t(24)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=r.apply(this,arguments);return o.emit(n+"start",arguments,t),t.then(function(e){return o.emit(n+"end",[null,e],t),e},function(e){throw o.emit(n+"end",[e],t),e})})}var o=t("ee").get("fetch"),i=t(21);e.exports=o;var a=window,s="fetch-",c=s+"body-",f=["arrayBuffer","blob","json","text","formData"],u=a.Request,d=a.Response,p=a.fetch,l="prototype";u&&d&&p&&(i(f,function(t,e){r(u[l],e,c),r(d[l],e,c)}),r(a,"fetch",s),o.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),o.emit(s+"done",[null,e],n)}else o.emit(s+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),o=t(24)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){function r(t){function e(){c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}function n(){c.emit("jsonp-error",[],p),c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var u=s(a),d="function"==typeof u.parent[u.key];if(d){var p={};f.inPlace(u.parent,[u.key],"cb-",p),t.addEventListener("load",e,!1),t.addEventListener("error",n,!1),c.emit("new-jsonp",[t.src],p)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(u);return e?e[1]:null}function a(t,e){var n=t.match(p),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function s(t){var e=t.match(d);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var c=t("ee").get("jsonp"),f=t(24)(c);if(e.exports=c,o()){var u=/[?&](?:callback|cb)=([^&#]+)/,d=/(.*)\.([^.]+)/,p=/^(\w+)(\.|$)(.*)$/,l=["appendChild","insertBefore","replaceChild"];f.inPlace(HTMLElement.prototype,l,"dom-"),f.inPlace(HTMLHeadElement.prototype,l,"dom-"),f.inPlace(HTMLBodyElement.prototype,l,"dom-"),c.on("dom-start",function(t){r(t[0])})}},{}],10:[function(t,e,n){var r=t("ee").get("mutation"),o=t(24)(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],11:[function(t,e,n){function r(t){var e=a.context(),n=s(t,"executor-",e),r=new f(n);return a.context(r).getCtx=function(){return e},a.emit("new-promise",[r,e],e),r}function o(t,e){return e}var i=t(24),a=t("ee").get("promise"),s=i(a),c=t(21),f=NREUM.o.PR;e.exports=a,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){a.emit("propagate",[null,!o],i),o=o||!t}}var o=!1;c(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var i=e.apply(f,arguments),s=f.resolve(i);return s}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&a.emit("propagate",[t,!0],n),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),c(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),a.on("executor-start",function(t){t[0]=s(t[0],"resolve-",this),t[1]=s(t[1],"resolve-",this)}),a.on("executor-err",function(t,e,n){t[1](n)}),s.inPlace(f.prototype,["then"],"then-",o),a.on("then-start",function(t,e){this.promise=e,t[0]=s(t[0],"cb-",this),t[1]=s(t[1],"cb-",this)}),a.on("then-end",function(t,e,n){this.nextPromise=n;var r=this.promise;a.emit("propagate",[r,!0],n)}),a.on("cb-end",function(t,e,n){a.emit("propagate",[n,!0],this.nextPromise)}),a.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=a.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],12:[function(t,e,n){var r=t("ee").get("raf"),o=t(24)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],13:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(24)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],14:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):v?v(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t(24)(u),p=NREUM.o,l=p.XHR,h=p.MO,m=p.PR,v=p.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];e.exports=u;var b=window.XMLHttpRequest=function(t){var e=new l(t);try{u.emit("new-xhr",[e],e),e.addEventListener(w,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(l,b),b.prototype=l.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!v&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],15:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=a.now()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(e.cat=c.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=c(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(16),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,p=t("id"),l=t(19),h=t(18),m=window.XMLHttpRequest;a.features.xhr=!0,t(14),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,l&&(l>34||l<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<d;s++)e.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)})}},{}],16:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],17:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(s(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(21),s=t(22),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){u[e]=o(p+e,!0,"api")}),u.addPageAction=o(p+"addPageAction",!0),u.setCurrentRouteName=o(p+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[f.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],18:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],19:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],20:[function(t,e,n){function r(t,e){if(!o)return!1;if(t!==o)return!1;if(!e)return!0;if(!i)return!1;for(var n=i.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}e.exports={agent:o,version:i,match:r}},{}],21:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],22:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],23:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],24:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(22),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof n?n(r,a):n||{}}catch(f){p([f,"",[r,a,o],s])}u(e+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],s),d}finally{u(e+"end",[r,a,c],s)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<e.length;c++)s=e[c],a=t[s],r(a)||(t[s]=n(a,f?s+o:o,i,s))}function u(n,r,o){if(!c||e){var i=c;c=!0;try{t.emit(n,r,o,e)}catch(a){p([a,n,r,o])}c=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){p([r])}for(var o in t)s.call(t,o)&&(e[o]=t[o]);return e}function p(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function n(n,r,o,i){if(!p.aborted||i){t&&t(n,r,o);for(var a=e(o),s=m(n),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[g[n]];return d&&d.push([b,n,r,a]),a}}function l(t,e){y[t]=m(t).concat(e)}function h(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return y[t]||[]}function v(t){return d[t]=d[t]||o(n)}function w(t,e){f(t,function(t,n){e=e||"feature",g[n]=e,e in u||(u[e]=[])})}var y={},g={},b={on:l,addEventListener:l,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(p.aborted=!0,u=p.backlog={})}var s="nr@context",c=t("gos"),f=t(21),u={},d={},p=e.exports=o();p.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=x.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(g,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()+x.offset],null,"api");var n=l.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-x.offset}var s=(new Date).getTime(),c=t("handle"),f=t(21),u=t("ee"),d=t(20),p=window,l=p.document,h="addEventListener",m="attachEvent",v=p.XMLHttpRequest,w=v&&v.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:v,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1099.min.js"},b=v&&w&&w[h]&&!/CriOS/.test(navigator.userAgent),x=e.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:b,userAgent:d};t(17),l[h]?(l[h]("DOMContentLoaded",i,!1),p[h]("load",r,!1)):(l[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(23)},{}]},{},["loader",2,15,5,3,4]);
+    ;NREUM.info={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",licenseKey:"2059d2614a",applicationID:"17871435",sa:1}</script><script>!function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"sgmt.udacity.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
+  }}();</script><link href="./Reinforcement Learning with AWS DeepRacer_files/11.135ab.css" rel="stylesheet"><link href="./Reinforcement Learning with AWS DeepRacer_files/app.04632.css" rel="stylesheet"><iframe hidden="" src="./Reinforcement Learning with AWS DeepRacer_files/saved_resource.html"></iframe><style>._2kAD_NKIY3UML72LnNeDhG{width:44px;height:40px;position:absolute;top:2rem;left:-7px;z-index:1;background-color:#02ccba;display:flex;justify-content:center;align-items:center}</style><style>$vds-background-color-error: #FBE6E6;
+$vds-background-color-warning: #FFF5E2;
+$vds-background-color-success: #E3F8ED;
+$vds-background-color-information: #E5EFF5;
+$vds-border-radius-none: 0;
+$vds-border-radius-base: 0.5rem;
+$vds-border-radius-secondary: 0.25rem;
+$vds-border-radius-circle: 50%;
+$vds-border-error: 2px solid #DD3131;
+$vds-border-warning: 2px solid #FFAE0C;
+$vds-border-success: 2px solid #15C26B;
+$vds-border-information: 2px solid #2A77AA;
+$vds-border-color-error: #DD3131;
+$vds-border-color-warning: #FFAE0C;
+$vds-border-color-success: #15C26B;
+$vds-border-color-information: #2A77AA;
+$vds-box-shadow-0: none;
+$vds-box-shadow-1: 0 2px 4px 0 rgba(17,22,26,0.16), 0 0 4px 0 rgba(17,22,26,0.08), 0 4px 8px 0 rgba(17,22,26,0.04);
+$vds-box-shadow-2: 0 4px 8px 0 rgba(17,22,26,0.16), 0 4px 8px 0 rgba(17,22,26,0.08), 0 8px 16px 0 rgba(17,22,26,0.04);
+$vds-box-shadow-3: 0 0 8px 0 rgba(17,22,26,0.06), 0 4px 16px 0 rgba(17,22,26,0.08), 0 8px 12px 0 rgba(17,22,26,0.06), 0 16px 24px 0 rgba(17,22,26,0.04);
+$vds-box-shadow-4: 0 4px 12px 0 rgba(17,22,26,0.06), 0 4px 24px 8px rgba(17,22,26,0.12), 0 8px 16px 0 rgba(17,22,26,0.06), 0 32px 40px 0 rgba(17,22,26,0.02);
+$vds-box-shadow-5: 0 4px 12px 0 rgba(0,0,0,0.08), 0 8px 32px 8px rgba(17,22,26,0.12), 0 16px 24px 8px rgba(17,22,26,0.06), 0 64px 48px 8px rgba(17,22,26,0.06);
+$vds-breakpoint-xs: 20rem;
+$vds-breakpoint-sm: 30rem;
+$vds-breakpoint-md: 48rem;
+$vds-breakpoint-lg: 62rem;
+$vds-breakpoint-xl: 73.75rem;
+$vds-color-cerulean-darker: #014052;
+$vds-color-cerulean-dark: #017A9B;
+$vds-color-cerulean: #02B3E4;
+$vds-color-cerulean-light: #53CBED;
+$vds-color-cerulean-lighter: #A4E4F5;
+$vds-color-cerulean-lightest: #F5FCFE;
+$vds-color-slate-darker: #11161A;
+$vds-color-slate-dark: #1F2932;
+$vds-color-slate: #2E3D49;
+$vds-color-slate-light: #6D7780;
+$vds-color-slate-lighter: #B4B9BD;
+$vds-color-slate-lightest: #F7F7F8;
+$vds-color-silver-darker: #242A2F;
+$vds-color-silver-dark: #454F58;
+$vds-color-silver: #657482;
+$vds-color-silver-light: #96A0AA;
+$vds-color-silver-lighter: #C8CDD2;
+$vds-color-silver-lightest: #F9F9FA;
+$vds-color-red-darker: #501212;
+$vds-color-red-dark: #962121;
+$vds-color-red: #DD3131;
+$vds-color-red-light: #E87373;
+$vds-color-red-lighter: #F3B5B5;
+$vds-color-red-lightest: #FBE6E6;
+$vds-color-orange-darker: #5C3F04;
+$vds-color-orange-dark: #9E6C07;
+$vds-color-orange: #FFAE0C;
+$vds-color-orange-light: #FFC85A;
+$vds-color-orange-lighter: #FFE2A8;
+$vds-color-orange-lightest: #FFF5E2;
+$vds-color-green-darker: #084627;
+$vds-color-green-dark: #0E8449;
+$vds-color-green: #15C26B;
+$vds-color-green-light: #60D69A;
+$vds-color-green-lighter: #ABE9CA;
+$vds-color-green-lightest: #E3F8ED;
+$vds-color-blue-darker: #0F2B3D;
+$vds-color-blue-dark: #1D5174;
+$vds-color-blue: #2A77AA;
+$vds-color-blue-light: #6EA3C5;
+$vds-color-blue-lighter: #B2CEE0;
+$vds-color-blue-lightest: #E5EFF5;
+$vds-color-purple-darker: #391B50;
+$vds-color-purple-dark: #6C3498;
+$vds-color-purple: #9F4CDF;
+$vds-color-purple-light: #BE85E9;
+$vds-color-purple-lighter: #DCBFF3;
+$vds-color-purple-lightest: #F3EAFB;
+$vds-color-yellow-darker: #554809;
+$vds-color-yellow-dark: #A88E12;
+$vds-color-yellow: #ECC81A;
+$vds-color-yellow-light: #F2DA63;
+$vds-color-yellow-lighter: #F8EBAD;
+$vds-color-yellow-lightest: #FDF8E4;
+$vds-color-teal-darker: #014943;
+$vds-color-teal-dark: #018377;
+$vds-color-teal: #02CCBA;
+$vds-color-teal-light: #53DCD0;
+$vds-color-teal-lighter: #A4EDE6;
+$vds-color-teal-lightest: #E1F9F7;
+$vds-color-magenta-darker: #5C1E2F;
+$vds-color-magenta-dark: #AD3959;
+$vds-color-magenta: #FF5483;
+$vds-color-magenta-light: #FF8BAB;
+$vds-color-magenta-lighter: #FFC1D2;
+$vds-color-magenta-lightest: #FFEAF0;
+$vds-color-white: #FFFFFF;
+$vds-color-black: #000709;
+$vds-base-duration: 0.3s;
+$vds-base-timing: ease;
+$vds-transition-all: all 0.3s ease;
+$vds-font-family-text: 'Open Sans', sans-serif;
+$vds-font-family-code: 'Source Code Pro', monospace;
+$vds-base-font-unit: 16;
+$vds-base-font-size: 16px;
+$vds-heading-font-size-h1: 2.5rem;
+$vds-heading-font-size-h2: 2rem;
+$vds-heading-font-size-h3: 1.5rem;
+$vds-heading-font-size-h4: 1rem;
+$vds-heading-font-size-h5: 0.75rem;
+$vds-heading-font-size-h6: 0.625rem;
+$vds-heading-font-size-h1-mobile: 2rem;
+$vds-heading-font-size-h2-mobile: 1.5rem;
+$vds-heading-font-size-h3-mobile: 1.125rem;
+$vds-heading-font-size-h4-mobile: 1rem;
+$vds-text-font-size: 1rem;
+$vds-text-font-size-sm: 0.875rem;
+$vds-text-font-size-xs: 0.75rem;
+$vds-quote-font-size: 1.5rem;
+$vds-quote-font-size-mobile: 1.125rem;
+$vds-font-weight-light: 300;
+$vds-font-weight-regular: 400;
+$vds-font-weight-semibold: 600;
+$vds-font-weight-bold: 700;
+$vds-font-weight-extrabold: 800;
+$vds-gradient-silver-cerulean: linear-gradient(to bottom right, #F9F9FA, #F5FCFE);
+$vds-gradient-silver-slate: linear-gradient(to bottom right, #F9F9FA, #F7F7F8);
+$vds-gradient-purple-cerulean: linear-gradient(to bottom right, #DCBFF3, #A4E4F5);
+$vds-gradient-purple-magenta: linear-gradient(to bottom right, #9F4CDF, #FF5483);
+$vds-gradient-teal-purple: linear-gradient(to bottom right, #02CCBA, #9F4CDF);
+$vds-gradient-cerulean-teal: linear-gradient(to bottom right, #02B3E4, #02CCBA);
+$vds-gradient-magenta-yellow: linear-gradient(to bottom right, #FF5483, #ECC81A);
+$vds-gradient-cerulean-purple: linear-gradient(to bottom right, #02B3E4, #9F4CDF);
+$vds-gradient-purple-magenta-dark: linear-gradient(to bottom right, #6C3498, #AD3959);
+$vds-gradient-teal-purple-dark: linear-gradient(to bottom right, #018377, #6C3498);
+$vds-gradient-cerulean-teal-dark: linear-gradient(to bottom right, #017A9B, #018377);
+$vds-gradient-magenta-yellow-dark: linear-gradient(to bottom right, #AD3959, #A88E12);
+$vds-gradient-cerulean-purple-dark: linear-gradient(to bottom right, #017A9B, #6C3498);
+$vds-letter-spacing: 1.5px;
+$vds-base-line-height: 28px;
+$vds-heading-line-height-h1: 4rem;
+$vds-heading-line-height-h2: 3rem;
+$vds-heading-line-height-h3: 2.5rem;
+$vds-heading-line-height-h4: 2rem;
+$vds-heading-line-height-h5: 1.5rem;
+$vds-heading-line-height-h6: 1rem;
+$vds-heading-line-height-h1-mobile: 3rem;
+$vds-heading-line-height-h2-mobile: 2.5rem;
+$vds-heading-line-height-h3-mobile: 2rem;
+$vds-heading-line-height-h4-mobile: 1.75rem;
+$vds-text-line-height: 2rem;
+$vds-text-line-height-sm: 1.5rem;
+$vds-text-line-height-xs: 1.5rem;
+$vds-quote-line-height: 2.5rem;
+$vds-quote-line-height-mobile: 2rem;
+$vds-text-selection-opacity: 0.40;
+$vds-text-max-width-sm: 30rem;
+$vds-text-max-width-base: 40rem;
+$vds-text-max-width-lg: 50rem;
+$vds-spacing-none: 0;
+$vds-spacing-half: 0.25rem;
+$vds-spacing-1x: 0.5rem;
+$vds-spacing-2x: 1rem;
+$vds-spacing-3x: 1.5rem;
+$vds-spacing-4x: 2rem;
+$vds-spacing-6x: 3rem;
+$vds-spacing-inline-half: 0 0.25rem 0 0;
+$vds-spacing-inline-1x: 0 0.5rem 0 0;
+$vds-spacing-inline-2x: 0 1rem 0 0;
+$vds-spacing-inline-3x: 0 1.5rem 0 0;
+$vds-spacing-inline-4x: 0 2rem 0 0;
+$vds-spacing-inline-6x: 0 3rem 0 0;
+$vds-spacing-inset-half: 0.25rem 0.25rem 0.25rem 0.25rem;
+$vds-spacing-inset-1x: 0.5rem 0.5rem 0.5rem 0.5rem;
+$vds-spacing-inset-2x: 1rem 1rem 1rem 1rem;
+$vds-spacing-inset-3x: 1.5rem 1.5rem 1.5rem 1.5rem;
+$vds-spacing-inset-4x: 2rem 2rem 2rem 2rem;
+$vds-spacing-inset-6x: 3rem 3rem 3rem 3rem;
+$vds-spacing-stack-half: 0 0 0.25rem 0;
+$vds-spacing-stack-1x: 0 0 0.5rem 0;
+$vds-spacing-stack-2x: 0 0 1rem 0;
+$vds-spacing-stack-3x: 0 0 1.5rem 0;
+$vds-spacing-stack-4x: 0 0 2rem 0;
+$vds-spacing-stack-6x: 0 0 3rem 0;
+$vds-text-color: #11161A;
+$vds-text-selection-color: #A4E4F5;
+$vds-text-color-error: #501212;
+$vds-text-color-warning: #5C3F04;
+$vds-text-color-success: #084627;
+$vds-text-color-information: #0F2B3D;
+</style><style>$vds-background-color-error: #FBE6E6;
+$vds-background-color-warning: #FFF5E2;
+$vds-background-color-success: #E3F8ED;
+$vds-background-color-information: #E5EFF5;
+$vds-border-radius-none: 0;
+$vds-border-radius-base: 0.5rem;
+$vds-border-radius-secondary: 0.25rem;
+$vds-border-radius-circle: 50%;
+$vds-border-error: 2px solid #DD3131;
+$vds-border-warning: 2px solid #FFAE0C;
+$vds-border-success: 2px solid #15C26B;
+$vds-border-information: 2px solid #2A77AA;
+$vds-border-color-error: #DD3131;
+$vds-border-color-warning: #FFAE0C;
+$vds-border-color-success: #15C26B;
+$vds-border-color-information: #2A77AA;
+$vds-box-shadow-0: none;
+$vds-box-shadow-1: 0 2px 4px 0 rgba(17,22,26,0.16), 0 0 4px 0 rgba(17,22,26,0.08), 0 4px 8px 0 rgba(17,22,26,0.04);
+$vds-box-shadow-2: 0 4px 8px 0 rgba(17,22,26,0.16), 0 4px 8px 0 rgba(17,22,26,0.08), 0 8px 16px 0 rgba(17,22,26,0.04);
+$vds-box-shadow-3: 0 0 8px 0 rgba(17,22,26,0.06), 0 4px 16px 0 rgba(17,22,26,0.08), 0 8px 12px 0 rgba(17,22,26,0.06), 0 16px 24px 0 rgba(17,22,26,0.04);
+$vds-box-shadow-4: 0 4px 12px 0 rgba(17,22,26,0.06), 0 4px 24px 8px rgba(17,22,26,0.12), 0 8px 16px 0 rgba(17,22,26,0.06), 0 32px 40px 0 rgba(17,22,26,0.02);
+$vds-box-shadow-5: 0 4px 12px 0 rgba(0,0,0,0.08), 0 8px 32px 8px rgba(17,22,26,0.12), 0 16px 24px 8px rgba(17,22,26,0.06), 0 64px 48px 8px rgba(17,22,26,0.06);
+$vds-breakpoint-xs: 20rem;
+$vds-breakpoint-sm: 30rem;
+$vds-breakpoint-md: 48rem;
+$vds-breakpoint-lg: 62rem;
+$vds-breakpoint-xl: 73.75rem;
+$vds-color-cerulean-darker: #014052;
+$vds-color-cerulean-dark: #017A9B;
+$vds-color-cerulean: #02B3E4;
+$vds-color-cerulean-light: #53CBED;
+$vds-color-cerulean-lighter: #A4E4F5;
+$vds-color-cerulean-lightest: #F5FCFE;
+$vds-color-slate-darker: #11161A;
+$vds-color-slate-dark: #1F2932;
+$vds-color-slate: #2E3D49;
+$vds-color-slate-light: #6D7780;
+$vds-color-slate-lighter: #B4B9BD;
+$vds-color-slate-lightest: #F7F7F8;
+$vds-color-silver-darker: #242A2F;
+$vds-color-silver-dark: #454F58;
+$vds-color-silver: #657482;
+$vds-color-silver-light: #96A0AA;
+$vds-color-silver-lighter: #C8CDD2;
+$vds-color-silver-lightest: #F9F9FA;
+$vds-color-red-darker: #501212;
+$vds-color-red-dark: #962121;
+$vds-color-red: #DD3131;
+$vds-color-red-light: #E87373;
+$vds-color-red-lighter: #F3B5B5;
+$vds-color-red-lightest: #FBE6E6;
+$vds-color-orange-darker: #5C3F04;
+$vds-color-orange-dark: #9E6C07;
+$vds-color-orange: #FFAE0C;
+$vds-color-orange-light: #FFC85A;
+$vds-color-orange-lighter: #FFE2A8;
+$vds-color-orange-lightest: #FFF5E2;
+$vds-color-green-darker: #084627;
+$vds-color-green-dark: #0E8449;
+$vds-color-green: #15C26B;
+$vds-color-green-light: #60D69A;
+$vds-color-green-lighter: #ABE9CA;
+$vds-color-green-lightest: #E3F8ED;
+$vds-color-blue-darker: #0F2B3D;
+$vds-color-blue-dark: #1D5174;
+$vds-color-blue: #2A77AA;
+$vds-color-blue-light: #6EA3C5;
+$vds-color-blue-lighter: #B2CEE0;
+$vds-color-blue-lightest: #E5EFF5;
+$vds-color-purple-darker: #391B50;
+$vds-color-purple-dark: #6C3498;
+$vds-color-purple: #9F4CDF;
+$vds-color-purple-light: #BE85E9;
+$vds-color-purple-lighter: #DCBFF3;
+$vds-color-purple-lightest: #F3EAFB;
+$vds-color-yellow-darker: #554809;
+$vds-color-yellow-dark: #A88E12;
+$vds-color-yellow: #ECC81A;
+$vds-color-yellow-light: #F2DA63;
+$vds-color-yellow-lighter: #F8EBAD;
+$vds-color-yellow-lightest: #FDF8E4;
+$vds-color-teal-darker: #014943;
+$vds-color-teal-dark: #018377;
+$vds-color-teal: #02CCBA;
+$vds-color-teal-light: #53DCD0;
+$vds-color-teal-lighter: #A4EDE6;
+$vds-color-teal-lightest: #E1F9F7;
+$vds-color-magenta-darker: #5C1E2F;
+$vds-color-magenta-dark: #AD3959;
+$vds-color-magenta: #FF5483;
+$vds-color-magenta-light: #FF8BAB;
+$vds-color-magenta-lighter: #FFC1D2;
+$vds-color-magenta-lightest: #FFEAF0;
+$vds-color-white: #FFFFFF;
+$vds-color-black: #000709;
+$vds-base-duration: 0.3s;
+$vds-base-timing: ease;
+$vds-transition-all: all 0.3s ease;
+$vds-font-family-text: 'Open Sans', sans-serif;
+$vds-font-family-code: 'Source Code Pro', monospace;
+$vds-base-font-unit: 16;
+$vds-base-font-size: 16px;
+$vds-heading-font-size-h1: 2.5rem;
+$vds-heading-font-size-h2: 2rem;
+$vds-heading-font-size-h3: 1.5rem;
+$vds-heading-font-size-h4: 1rem;
+$vds-heading-font-size-h5: 0.75rem;
+$vds-heading-font-size-h6: 0.625rem;
+$vds-heading-font-size-h1-mobile: 2rem;
+$vds-heading-font-size-h2-mobile: 1.5rem;
+$vds-heading-font-size-h3-mobile: 1.125rem;
+$vds-heading-font-size-h4-mobile: 1rem;
+$vds-text-font-size: 1rem;
+$vds-text-font-size-sm: 0.875rem;
+$vds-text-font-size-xs: 0.75rem;
+$vds-quote-font-size: 1.5rem;
+$vds-quote-font-size-mobile: 1.125rem;
+$vds-font-weight-light: 300;
+$vds-font-weight-regular: 400;
+$vds-font-weight-semibold: 600;
+$vds-font-weight-bold: 700;
+$vds-font-weight-extrabold: 800;
+$vds-gradient-silver-cerulean: linear-gradient(to bottom right, #F9F9FA, #F5FCFE);
+$vds-gradient-silver-slate: linear-gradient(to bottom right, #F9F9FA, #F7F7F8);
+$vds-gradient-purple-cerulean: linear-gradient(to bottom right, #DCBFF3, #A4E4F5);
+$vds-gradient-purple-magenta: linear-gradient(to bottom right, #9F4CDF, #FF5483);
+$vds-gradient-teal-purple: linear-gradient(to bottom right, #02CCBA, #9F4CDF);
+$vds-gradient-cerulean-teal: linear-gradient(to bottom right, #02B3E4, #02CCBA);
+$vds-gradient-magenta-yellow: linear-gradient(to bottom right, #FF5483, #ECC81A);
+$vds-gradient-cerulean-purple: linear-gradient(to bottom right, #02B3E4, #9F4CDF);
+$vds-gradient-purple-magenta-dark: linear-gradient(to bottom right, #6C3498, #AD3959);
+$vds-gradient-teal-purple-dark: linear-gradient(to bottom right, #018377, #6C3498);
+$vds-gradient-cerulean-teal-dark: linear-gradient(to bottom right, #017A9B, #018377);
+$vds-gradient-magenta-yellow-dark: linear-gradient(to bottom right, #AD3959, #A88E12);
+$vds-gradient-cerulean-purple-dark: linear-gradient(to bottom right, #017A9B, #6C3498);
+$vds-letter-spacing: 1.5px;
+$vds-base-line-height: 28px;
+$vds-heading-line-height-h1: 4rem;
+$vds-heading-line-height-h2: 3rem;
+$vds-heading-line-height-h3: 2.5rem;
+$vds-heading-line-height-h4: 2rem;
+$vds-heading-line-height-h5: 1.5rem;
+$vds-heading-line-height-h6: 1rem;
+$vds-heading-line-height-h1-mobile: 3rem;
+$vds-heading-line-height-h2-mobile: 2.5rem;
+$vds-heading-line-height-h3-mobile: 2rem;
+$vds-heading-line-height-h4-mobile: 1.75rem;
+$vds-text-line-height: 2rem;
+$vds-text-line-height-sm: 1.5rem;
+$vds-text-line-height-xs: 1.5rem;
+$vds-quote-line-height: 2.5rem;
+$vds-quote-line-height-mobile: 2rem;
+$vds-text-selection-opacity: 0.40;
+$vds-text-max-width-sm: 30rem;
+$vds-text-max-width-base: 40rem;
+$vds-text-max-width-lg: 50rem;
+$vds-spacing-none: 0;
+$vds-spacing-half: 0.25rem;
+$vds-spacing-1x: 0.5rem;
+$vds-spacing-2x: 1rem;
+$vds-spacing-3x: 1.5rem;
+$vds-spacing-4x: 2rem;
+$vds-spacing-6x: 3rem;
+$vds-spacing-inline-half: 0 0.25rem 0 0;
+$vds-spacing-inline-1x: 0 0.5rem 0 0;
+$vds-spacing-inline-2x: 0 1rem 0 0;
+$vds-spacing-inline-3x: 0 1.5rem 0 0;
+$vds-spacing-inline-4x: 0 2rem 0 0;
+$vds-spacing-inline-6x: 0 3rem 0 0;
+$vds-spacing-inset-half: 0.25rem 0.25rem 0.25rem 0.25rem;
+$vds-spacing-inset-1x: 0.5rem 0.5rem 0.5rem 0.5rem;
+$vds-spacing-inset-2x: 1rem 1rem 1rem 1rem;
+$vds-spacing-inset-3x: 1.5rem 1.5rem 1.5rem 1.5rem;
+$vds-spacing-inset-4x: 2rem 2rem 2rem 2rem;
+$vds-spacing-inset-6x: 3rem 3rem 3rem 3rem;
+$vds-spacing-stack-half: 0 0 0.25rem 0;
+$vds-spacing-stack-1x: 0 0 0.5rem 0;
+$vds-spacing-stack-2x: 0 0 1rem 0;
+$vds-spacing-stack-3x: 0 0 1.5rem 0;
+$vds-spacing-stack-4x: 0 0 2rem 0;
+$vds-spacing-stack-6x: 0 0 3rem 0;
+$vds-text-color: #11161A;
+$vds-text-selection-color: #A4E4F5;
+$vds-text-color-error: #501212;
+$vds-text-color-warning: #5C3F04;
+$vds-text-color-success: #084627;
+$vds-text-color-information: #0F2B3D;
+</style><style>$skyBlue: #d3f5ff;
+
+$cardBorderRadius: 6px;
+$classroomCardBoxShadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+$cardBoxShadow: 0 1px 20px 0 rgba(46, 61, 73, 0.2);
+
+$textSemibold: 600;
+
+/* leaderboard */
+
+$timeColor: $vds-color-cerulean;
+$projectColor: #53cbed;
+$attendanceColor: #a4e4f5;
+
+/* font */
+$standardLineHeight: 1.375rem;
+
+/* avatar sizes */
+$avatar-size-xs: 20px;
+$avatar-size-sm: 28px;
+$avatar-size-default: 45px;
+$avatar-size-md: 60px;
+$avatar-size-lg: 68px;
+</style><style>.ePMOlchLX6J-OSUni-Ime {
+  box-shadow: $classroomCardBoxShadow;
+  border-radius: $cardBorderRadius;
+  background-color: $vds-color-white;
+}
+
+._1boQ6bCwuhfbAKgMMrnrVN {
+  width: 100%;
+  border-radius: $cardBorderRadius;
+  background-color: $vds-color-silver-lightest;
+  padding: 45px 60px;
+  a {
+    color: $vds-color-cerulean;
+  }
+}
+
+._3SvsTmexqM3aZvlCctlCcT {
+  font-size: 1rem;
+  margin: 0 0 2rem 0;
+}
+
+._3xeQKAovLeIPuhgmxZ5BKM {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 300px;
+  &._33serZExh1ErMyYqujYoLT {
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+    border: none;
+  }
+}
+
+.HXlnBB8NaV9ObKAZQhyuP {
+  font-size: 18px;
+  color: $vds-color-slate;
+  font-weight: $textSemibold;
+  margin-top: 0.4em;
+  margin-bottom: 1em;
+  line-height: 1.6em;
+}
+
+._33serZExh1ErMyYqujYoLT {
+  display: flex;
+  &._1GL7S-vUMKJXCcJleU-4Gz {
+    box-shadow: $classroomCardBoxShadow;
+    border-radius: $cardBorderRadius;
+    &:last-child {
+      margin-left: 2em;
+      position: relative;
+      &:before {
+        content: "";
+        width: 4px;
+        height: 40px;
+        position: absolute;
+        top: 45px;
+        left: -2px;
+        background-color: $vds-color-teal;
+      }
+    }
+  }
+}
+
+._1GL7S-vUMKJXCcJleU-4Gz {
+  background: $vds-color-white;
+  position: relative;
+  border-radius: $cardBorderRadius;
+  flex: 1;
+  padding: 45px 60px;
+  min-height: 280px;
+  font-size: 16px;
+  p {
+    line-height: 1.6em;
+    color: $vds-color-slate;
+    margin-bottom: 0;
+  }
+  a {
+    color: $vds-color-cerulean-dark;
+    text-decoration: none;
+  }
+}
+
+._3lxrNIjJPgSmqF5vOKEPFc {
+  position: absolute;
+  bottom: 45px;
+  left: 60px;
+  right: 60px;
+  justify-content: space-between;
+}
+
+._3vbQfZ6PCyxSz4md5NoGZ8 {
+  width: 16.65em;
+  margin-right: 0.25em;
+}
+
+._1tU7FJNVAVumb195VDorEG {
+  width: 100%;
+  height: 100px;
+  display: block;
+  margin: 1em 0;
+}
+
+._118q9SO-I2WUjYGYk3OqJg {
+  width: 60%;
+  max-width: 360px;
+  display: inline-block;
+  margin-right: 2em;
+}
+
+._1z3KhCGI4xgJbS9pMGRJJA {
+  color: $vds-color-silver;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 1em;
+  font-style: normal;
+}
+
+._1ItxNG6EviZPkSAB9iNk6X {
+  font-size: 14px;
+  line-height: 1.6em;
+  display: flex;
+  align-items: center;
+}
+
+._2D06vX8iPh7FcYw5KXsJ6J {
+  color: $vds-color-silver;
+  font-size: 14px;
+  line-height: 1.6em;
+}
+
+._1z0IbqPMZcVTMNRoYfMuW6 {
+  cursor: pointer;
+  display: flex;
+  margin-bottom: 0;
+  align-items: center;
+  margin: 0 5em;
+}
+</style><style>._2GjSltTjX44gXiU4WIU7hQ{position:absolute;height:100%;width:100%;top:0;left:0;object-fit:cover;object-position:0 100%;cursor:pointer;border-radius:0 6px 6px 0}.BuLKhnYVpCdLpzUXCivXd{object-position:center}.Y8GgH84RFLWx6g3Da8xzb{}</style><style>.MtZ-32Gx9sgYzFU3IJ7zj{}._1jQZGxsOjWvJ8_BC-klCgO{margin-bottom:1em}</style><style>._2jpTNIaGArKWVdj5dBjH9h{text-align:center;background-color:#f5f7f8;border-radius:4px;padding:1.6em;position:absolute;font-style:italic;top:4em;right:3em;left:3em;bottom:3em}._2jpTNIaGArKWVdj5dBjH9h p{font-size:14px;height:70%;overflow-y:auto}.Ys1y1Zy05y1hnSHpmFlmk{height:75px;width:75px;display:block;object-fit:cover;border-radius:50px;margin:auto;margin-top:-4em}._3XzH7qPkJDDdQPWpe72UPQ{}._3IjpOReSTpIF98RkjDklUX{}</style><style>._3qGoD00Vo1zk42PBlaXQ0g{position:absolute;height:0;width:0;top:50%;left:50%}._2Bx94DEHKU0zT3hLW1chVu{}</style><style>._2_OL5EQhpw_yBSQTgKBdYM{display:flex;justify-content:center}._26jlk-WKgV2ekxKy3Dggtn{padding-right:10px;cursor:pointer;display:inline-block}.zgVHBUiv3ai6R1kXDiFzI{padding-right:17px}.zgVHBUiv3ai6R1kXDiFzI:first-of-type{padding-left:17px}</style><style>._2HGnjaqKz4uJkrWG5AV5n7{padding:50px 100px;text-align:center}.jqvGz8EnbhCxYb3ejuNkG{margin-top:60px;display:flex;justify-content:center}._2cCFa2YXM4V8bFVJ9LaYCi{padding:1.2em 3em;width:18.4em}._3F8sJ04opBp3Q8BhBHdlIt{display:flex;justify-content:center;flex-direction:column}.QLeHih2B-aHCoEa38rMol{justify-content:center;min-height:1.6em;font-style:italic}._2ZAcY1MA70wde2q6oqA1Wi{width:120px;height:120px;object-fit:cover;border-radius:60px}.kk32g-ri1Ri3aEe7z6wgR{height:9.3em;margin-top:30px}.xWTwbW58e2rs2PZvOxEvk{margin-top:26px;font-size:1.12rem;color:#2e3d49}._1l43uwJzBu1RfW7mBU2O6J{margin:16px 0}@media(max-width: 46.24em){._2HGnjaqKz4uJkrWG5AV5n7{padding:30px}}</style><style>.KTPjB49H5-NzDd9ptl1wf{}._3MYD62bv0Bq2f1htf1RHHh{}._1lgIjBjcRYAIZQmphL7yse{}._2J68BVi1xQI8RfUZgnh-RU{}._2J68BVi1xQI8RfUZgnh-RU>div{width:100%}._2yc947CKdr6qZO_hufYxgD{display:flex;margin-bottom:1rem}._2aE9pjklx_LkoVy5jJhcm0{margin-left:1rem}._2Ht74gupRSl3fXYi3koL5k{display:flex;justify-content:flex-end}._1T-RzFq8lrdene2S6nW3XM{}._3f5Of5teGghUIQ71ZTfqco{margin-top:2rem;display:flex;align-items:center;justify-content:space-between}.U4Qglq1BDB2YXsTJKbq1T{margin-left:2em}</style><style>._1kbrzWQWRp9fZFr_yZNiTi{white-space:pre-line}.WJtrSfqDKLKJTwV_jT3MD{margin-top:1.5rem;font-size:14px}</style><style>.cl-Coht_ncaaNWXJyPADq{display:block}.xyH2WJGyMWGp_e7wiVLrE{}.DTf78lZ0giBqJXcjPDjTH{padding-bottom:45px}</style><style>._2Gsp2ePOFx3wiIJWhBO-_i{min-height:0}._1nImBa_8vTbZ-p3wpCtjOd{}._1pfxgd-PrWe5GtkUB_XSk{}</style><style>._2SjxNA8OWIRwm3a7MXGOPs{}._1R3HJ5jCU0R9ZMHWYP4poY{display:flex}.cPaDPtYAYtzrSldxVpGMh{}._2HiazdMQJU4Xf1MAFca0z2{margin-top:24px}._1NgOIsSChHtpRKlihpsLcE[disabled]{color:#02b3e4;background:#fff !important;border:1px solid #02b3e4}.yF8pej7LX4XaeO_NyXBAo{width:0;height:0;border-top:.35em solid transparent;border-bottom:.35em solid transparent;border-left:.6em solid #02b3e4;display:inline-block;margin-left:1.5em;margin-right:1.5em}._3EaHs69kU3vBKmaNhAO46a{font-size:.9em !important;font-style:italic;margin-bottom:3em;text-align:center}</style><style>.ePMOlchLX6J-OSUni-Ime{box-shadow:5px 5px 25px 0px rgba(46,61,73,.2);border-radius:6px;background-color:#fff}._1boQ6bCwuhfbAKgMMrnrVN{width:100%;border-radius:6px;background-color:#f9f9fa;padding:45px 60px}._1boQ6bCwuhfbAKgMMrnrVN a{color:#02b3e4}._3SvsTmexqM3aZvlCctlCcT{font-size:1rem;margin:0 0 2rem 0}._3xeQKAovLeIPuhgmxZ5BKM{position:relative;display:flex;flex-wrap:wrap;min-height:300px}._3xeQKAovLeIPuhgmxZ5BKM._33serZExh1ErMyYqujYoLT{background-color:rgba(0,0,0,0);box-shadow:none;border:none}.HXlnBB8NaV9ObKAZQhyuP{font-size:18px;color:#2e3d49;font-weight:600;margin-top:.4em;margin-bottom:1em;line-height:1.6em}._33serZExh1ErMyYqujYoLT{display:flex}._33serZExh1ErMyYqujYoLT._1GL7S-vUMKJXCcJleU-4Gz{box-shadow:5px 5px 25px 0px rgba(46,61,73,.2);border-radius:6px}._33serZExh1ErMyYqujYoLT._1GL7S-vUMKJXCcJleU-4Gz:last-child{margin-left:2em;position:relative}._33serZExh1ErMyYqujYoLT._1GL7S-vUMKJXCcJleU-4Gz:last-child:before{content:"";width:4px;height:40px;position:absolute;top:45px;left:-2px;background-color:#02ccba}._1GL7S-vUMKJXCcJleU-4Gz{background:#fff;position:relative;border-radius:6px;flex:1;padding:45px 60px;min-height:280px;font-size:16px}._1GL7S-vUMKJXCcJleU-4Gz p{line-height:1.6em;color:#2e3d49;margin-bottom:0}._1GL7S-vUMKJXCcJleU-4Gz a{color:#017a9b;text-decoration:none}._3lxrNIjJPgSmqF5vOKEPFc{position:absolute;bottom:45px;left:60px;right:60px;justify-content:space-between}._3vbQfZ6PCyxSz4md5NoGZ8{width:16.65em;margin-right:.25em}._1tU7FJNVAVumb195VDorEG{width:100%;height:100px;display:block;margin:1em 0}._118q9SO-I2WUjYGYk3OqJg{width:60%;max-width:360px;display:inline-block;margin-right:2em}._1z3KhCGI4xgJbS9pMGRJJA{color:#657482;text-transform:uppercase;letter-spacing:1px;font-size:12px;font-weight:600;margin-bottom:1em;font-style:normal}._1ItxNG6EviZPkSAB9iNk6X{font-size:14px;line-height:1.6em;display:flex;align-items:center}._2D06vX8iPh7FcYw5KXsJ6J{color:#657482;font-size:14px;line-height:1.6em}._1z0IbqPMZcVTMNRoYfMuW6{cursor:pointer;display:flex;margin-bottom:0;align-items:center;margin:0 5em}</style><style>._29ZSWPJ-n7bs9asCoYvfCU{padding:2rem;box-sizing:content-box}._29ZSWPJ-n7bs9asCoYvfCU ul{list-style-type:none;padding:0}._2bSwioBLutTjXUZftKAT9d{font-size:1.2rem;margin-bottom:2rem;text-align:center}.nBZeebhslv8jJLhm8aKhN{display:flex;align-items:center;line-height:1.75rem}.tTtKKFS9PWfIZ1rBeplNn{display:flex;margin-bottom:1rem}._3hHCpizVKJt6nceV9GHrxs{font-size:.875rem;color:#657482}.J-oGTkyFQuFgKd_W-pz85{height:1.5rem;width:1.5rem;flex-shrink:0;margin-right:1.1rem;text-indent:-999rem;color:transparent}._1PixMPWvWaFgEvFbmbNSFP{background-color:#02b3e4}.ifGILULnFa2dY8BDm2kks{background-color:#53cbed}._2OD66vnZPZjyTmn93cA2vs{background-color:#a4e4f5}._2RdCam7EgZu-zZek1w4gbh{margin:auto;display:block}</style><style>._2BsDZArRlhJcumsQTFiZsf{background:none;box-shadow:none;border:none;border-radius:0;color:#11161a;padding:0;margin:0;font-size:1rem;transition:color .2s ease}._2BsDZArRlhJcumsQTFiZsf:hover{cursor:pointer;color:#000709}</style><style>.Na75Kiw9eru_sWOi73ohZ{display:flex;height:1rem;position:relative}._3hXHDQ4KziCmt0I64gjHvx{display:flex;height:100%;border-radius:1rem;overflow:hidden;box-shadow:5px 5px 25px 0px rgba(46,61,73,.2)}.Pe1zMjWbYUXH1hTULQDN{background-color:#02b3e4}._20SfyBDCm5XjRRQYDbLw4_{background-color:#53cbed}._1yzQu9cvlDoY5uIBxtElU3{background-color:#a4e4f5}</style><style>.qVA-_DtXwdvwbVsrHUttF{padding:1rem}.qVA-_DtXwdvwbVsrHUttF li{display:flex;align-items:center;margin-bottom:.5rem}._1VIrs6TOtjuApk5g2vGg5c{display:inline-block;margin-right:1rem;width:1rem;height:1rem}._2fxErfzvQh87Or2-82kpj9{background-color:#02b3e4}._1VKIcOKO4qzPBkXZKGVSSe{background-color:#53cbed}.MQvuFEhE5U6-RZk2gVo3t{background-color:#a4e4f5}</style><style>._1pqvCq9g410KwSr_-qEzVx{display:flex;align-items:center;height:4.5rem;padding:0 2rem}._1pqvCq9g410KwSr_-qEzVx:nth-child(odd){background-color:#f9f9fa}._1wWyUllGK_8je2G3Wb3cTN{align-self:flex-start;margin-right:1rem}._1N7E3VTp0bbL3RfZp3rtpw{margin:0 1rem 0 0;width:2.5rem;font-size:1rem;font-weight:600;text-align:center}.Bkigkzzbz22IKzVXLtZX-{margin-right:1rem;width:10rem;display:flex;align-items:center}.Bkigkzzbz22IKzVXLtZX->*{margin-right:1rem;margin-top:0}.Bkigkzzbz22IKzVXLtZX- h3{position:relative;font-size:1.15rem}._3WNI_x6qGGSaU3IExFZu8T{display:flex;flex-direction:column;align-items:center}._2IZgKZtFPLVFVegjnX1lfN{color:#657482;margin-top:.15rem}._1fEyxz1psdXid255DnS0mW{margin-left:2rem}._15sFYOyETKVNGdVf39K_J8{height:40px;width:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;text-transform:uppercase}._3BBOiNk7GZXj37rx8JZdez{flex:1}</style><style>.Fd-j62ew-Abvv2m4ABcs8{padding:4rem;background-color:#fff;border-radius:6px;margin:auto}._1Eux6SHIStxG6KA6N2nJnZ{width:100%}._1paW5ONoac3_-lVV33TV5I{display:block;width:100%;font-size:1.3rem;font-weight:600;margin-bottom:2rem}._2CqSD9SNWxFa8WQDtYJGZM{margin-top:2rem}._2YxEcONizKujiJkXpRTlgm{margin-right:1.5rem;display:inline}</style><style>._220kqPSGbAGEDPyZEk9aNy{display:inline;font-size:1.25rem;font-weight:600;margin:0}.-tC24glIvfIxQsaS1XEtE{padding:2rem 2rem 2rem 4rem;display:flex;align-items:center}._1AaHsDGKf-0dm6Npi2y1y7{box-shadow:5px 5px 25px 0px rgba(46,61,73,.2);border-radius:6px;background-color:#fff;min-height:10rem;right:2rem;bottom:2rem;transition:all .2s ease}.st1YTcj77euD5hM2qy48F{padding-bottom:1rem;position:relative;box-shadow:0 0px 0px 0 #fff,0 4px 8px 0 rgba(17,22,26,.08),0 0px 0px 0 #fff}.ZOq3r0e34l2UNOGc7j-Xr{overflow-y:scroll;height:18rem;padding:0}.azmCqN7vKT0gRxBqLh2Hl{height:3rem;background:linear-gradient(transparent, #FFFFFF 100%);position:absolute;bottom:0;left:0;width:100%;border-radius:0 0 6px 6px}._3FtZVudiLl6KxbDvO8jkis{margin:3rem auto;width:40px}.TG3i8ZB8YfDW2_sWOgd9s{margin-left:1rem}._3pezHupnnbXhabjMLWqxp0{margin-left:auto;color:#02b3e4}._2Jb4bpw6msrF2kNlJv8sn1{color:#02b3e4;font-size:24px}._2Jb4bpw6msrF2kNlJv8sn1:hover{color:#96a0aa}._10Y-Bl0MvB8WRnLgZiK8g_{display:inline-flex;align-items:center;margin-left:2rem}._28B31LlU7WvICBB4zEfV8U{font-size:14px;margin-right:.75rem}._29cAkFvZlyodFdWi8OOviX{border:1px solid #017a9b;padding:.5rem .5rem}._29cAkFvZlyodFdWi8OOviX:hover{background-color:#d3f5ff}.EW3Ipm0bpzlIbbwIQoNl0{border-radius:4px 0 0 4px}._1kGcq235Z9JnpG9Oi1aZ69{border-left:none;border-radius:0 4px 4px 0}._1kGcq235Z9JnpG9Oi1aZ69:disabled{border-color:#c8cdd2}._1kGcq235Z9JnpG9Oi1aZ69:disabled:hover{cursor:default;background-color:transparent}</style><style>.ureact-app__header .page-title{color:#2e3d49;font-size:1.125rem;font-weight:normal;padding:.875rem}</style><style>.ureact-app__body{display:flex;flex-direction:column;flex:1 0 auto;transition:.3s height ease-in-out}</style><style>.ureact-app__container{bottom:0;display:flex;font-size:1rem;left:0;position:absolute;right:0;top:0}.ureact-app__nav{background:#1f2932;bottom:0;height:100%;left:0;position:absolute;top:0;transform:translateX(0);transition:.2s all ease-in-out;z-index:10}.ureact-app__nav.large-primary{width:16rem}.ureact-app__nav.large-primary .primary-nav{width:100%}.ureact-app__nav.primary-and-secondary{width:20rem}.ureact-app__nav.secondary-only{width:20rem}.ureact-app__nav.small-primary{width:4rem}.ureact-app__nav.small-primary .primary-nav,.ureact-app__nav.primary-and-secondary .primary-nav{width:4rem}.ureact-app__nav .nav__a11y-link{display:block;height:0;left:-999em;overflow:hidden;position:absolute;text-indent:-999em;width:0}.ureact-app__nav .nav__contents{display:flex;height:100%}.ureact-app__nav .nav__contents .primary-nav,.ureact-app__nav .nav__contents .secondary-nav{height:100%}.ureact-app__nav .nav__contents .primary-nav{flex-grow:0;flex-shrink:0;position:relative;overflow:hidden}.ureact-app__nav .nav__contents .secondary-nav{background:#2e3d49;overflow-y:auto;width:100%}.ureact-app__nav.hidden{transform:translateX(-100%)}.ureact-app__nav.hidden .nav__contents{animation-name:hideFromKeyboard;animation-delay:.2s;animation-fill-mode:forwards;animation-duration:.1s;flex-basis:0;height:100vh;overflow:hidden}.ureact-app__main{box-sizing:border-box;height:100%;min-width:300px;position:relative;transition:.2s padding-top ease-in-out;width:100%}.ureact-app__main .title-area{background-color:#fff;box-shadow:0 0 40px rgba(0,0,0,.2);left:0;position:absolute;right:0;top:0;transition:.2s margin-left ease-in-out,.2s margin-right ease-in-out;z-index:9}.ureact-app__main .content-area{display:flex;flex-direction:column;height:100%;overflow-y:auto;transition:.2s padding-top ease-in-out,.2s margin-left ease-in-out,.2s margin-right ease-in-out}.ureact-app__main .hidden-header{visibility:hidden}.secondary-only+.ureact-app__main .title-area,.secondary-only+.ureact-app__main .content-area{margin-left:20rem}.primary-and-secondary+.ureact-app__main .title-area,.primary-and-secondary+.ureact-app__main .content-area{margin-left:20rem}.small-primary+.ureact-app__main .title-area,.small-primary+.ureact-app__main .content-area{margin-left:4rem}.large-primary+.ureact-app__main .title-area,.large-primary+.ureact-app__main .content-area{margin-left:16rem}.secondary-only+.ureact-app__main .title-area,.secondary-only+.ureact-app__main .content-area{margin-left:20rem}.ureact-app__main .title-area,.ureact-app__main .content-area,.hidden+.ureact-app__main .title-area,.hidden+.ureact-app__main .content-area,.none+.ureact-app__main .title-area,.none+.ureact-app__main .content-area{margin-left:0}body[dir=rtl] .ureact-app__nav{left:auto;right:0}body[dir=rtl] .ureact-app__nav.hidden{transform:translateX(100%)}body[dir=rtl] .secondary-only+.ureact-app__main .title-area,body[dir=rtl] .secondary-only+.ureact-app__main .content-area{margin-left:0;margin-right:20rem}body[dir=rtl] .primary-and-secondary+.ureact-app__main .title-area,body[dir=rtl] .primary-and-secondary+.ureact-app__main .content-area{margin-left:0;margin-right:20rem}body[dir=rtl] .small-primary+.ureact-app__main .title-area,body[dir=rtl] .small-primary+.ureact-app__main .content-area{margin-left:0;margin-right:4rem}body[dir=rtl] .large-primary+.ureact-app__main .title-area,body[dir=rtl] .large-primary+.ureact-app__main .content-area{margin-left:0;margin-right:16rem}body[dir=rtl] .ureact-app__main .title-area,body[dir=rtl] .ureact-app__main .content-area,body[dir=rtl] .hidden+.ureact-app__main .title-area,body[dir=rtl] .hidden+.ureact-app__main .content-area,body[dir=rtl] .none+.ureact-app__main .title-area,body[dir=rtl] .none+.ureact-app__main .content-area{margin-left:0;margin-right:0}@media(max-width: 46.24em){.ureact-app__main .title-area,.ureact-app__main .content-area{width:100%}}@keyframes hideFromKeyboard{0%{visibility:visible}100%{visibility:hidden}}</style><style>._nav,.ureact-app__nav .nav-large,.ureact-app__nav .nav-small{display:flex;flex-direction:column;font-size:2rem;height:100%;overflow-x:hidden;overflow-y:auto;padding:0}._nav .logo,.ureact-app__nav .nav-large .logo,.ureact-app__nav .nav-small .logo{margin-left:1rem;margin-right:1rem}.ureact-app__nav .nav-small .logo{width:2rem}.ureact-app__nav .nav-small .nav-item-title{opacity:0;overflow:hidden;position:absolute;text-indent:-999em}.ureact-app__nav .nav-large{width:14rem}.ureact-app__nav .nav-large .nav-item-icon-container{margin-right:1rem}.ureact-app__nav .logo{flex:0 0 auto;margin:1rem 0}.ureact-app__nav .nav-groups{display:flex;flex-direction:column;flex:1 1 100%;justify-content:space-between}.ureact-app__nav .nav-group{list-style:none;margin:0;padding:0}.ureact-app__nav .nav-item{line-height:1;margin-bottom:.25rem}.ureact-app__nav .nav-item a{align-items:center;color:#dbe2e8;display:flex;padding:.5rem .75rem;text-decoration:none}.ureact-app__nav .nav-item-icon-container{display:inline-block;position:relative;text-align:center}.ureact-app__nav .nav-item-icon{position:relative;width:2rem}.ureact-app__nav .nav-item-banner{background:#9f4cdf;border-radius:2px;font-size:.75rem;font-weight:600;left:50%;padding:1.5px 4px;position:absolute;text-transform:uppercase;bottom:-0.5rem;transform:translateX(-50%)}.ureact-app__nav .nav-item-title{font-size:1rem}.ureact-app__nav body[dir=rtl] ._nav .logo,.ureact-app__nav body[dir=rtl] .nav-small .logo,.ureact-app__nav body[dir=rtl] .nav-large .logo{margin-left:1rem;margin-right:1.25rem}.ureact-app__nav body[dir=rtl] .nav-large .nav-item-icon{margin-left:1rem;margin-right:0}.ureact-app__nav body[dir=rtl] .nav-small .nav-item-title{text-indent:999em}.ureact-app__nav body[dir=rtl] .nav-item-banner{left:auto;right:50%;transform:translateX(50%)}</style><style>@charset "UTF-8";
+.vjs-modal-dialog .vjs-modal-dialog-content, .video-js .vjs-modal-dialog, .vjs-button > .vjs-icon-placeholder:before, .video-js .vjs-big-play-button .vjs-icon-placeholder:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.vjs-button > .vjs-icon-placeholder:before, .video-js .vjs-big-play-button .vjs-icon-placeholder:before {
+  text-align: center;
+}
+
+@font-face {
+  font-family: VideoJS;
+  src: url(data:application/font-woff;charset=utf-8;base64,d09GRgABAAAAABDkAAsAAAAAG6gAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADsAAABUIIslek9TLzIAAAFEAAAAPgAAAFZRiV3hY21hcAAAAYQAAADaAAADPv749/pnbHlmAAACYAAAC3AAABHQZg6OcWhlYWQAAA3QAAAAKwAAADYZw251aGhlYQAADfwAAAAdAAAAJA+RCLFobXR4AAAOHAAAABMAAACM744AAGxvY2EAAA4wAAAASAAAAEhF6kqubWF4cAAADngAAAAfAAAAIAE0AIFuYW1lAAAOmAAAASUAAAIK1cf1oHBvc3QAAA/AAAABJAAAAdPExYuNeJxjYGRgYOBiMGCwY2BycfMJYeDLSSzJY5BiYGGAAJA8MpsxJzM9kYEDxgPKsYBpDiBmg4gCACY7BUgAeJxjYGS7wTiBgZWBgaWQ5RkDA8MvCM0cwxDOeI6BgYmBlZkBKwhIc01hcPjI+FGJHcRdyA4RZgQRADK3CxEAAHic7dFZbsMgAEXRS0ycyZnnOeG7y+qC8pU1dHusIOXxuoxaOlwZYWQB0Aea4quIEN4E9LzKbKjzDeM6H/mua6Lmc/p8yhg0lvdYx15ZG8uOLQOGjMp3EzqmzJizYMmKNRu27Nhz4MiJMxeu3Ljz4Ekqm7T8P52G8PP3lnTOVk++Z6iN6QZzNN1F7ptuN7eGOjDUoaGODHVsuvU8MdTO9Hd5aqgzQ50b6sJQl4a6MtS1oW4MdWuoO0PdG+rBUI+GejLUs6FeDPVqqDdDvRvqw1CfhpqM9At0iFLaAAB4nJ1YDXBTVRZ+5/22TUlJ8we0pHlJm7RJf5O8F2j6EymlSPkpxaL8U2xpa3DKj0CBhc2IW4eWKSokIoLsuMqssM64f+jA4HSdWXXXscBq67IOs3FXZ1ZYWVyRFdo899yXtIBQZ90k7717zz3v3HPPOfd854YCCj9cL9dL0RQFOqCbGJnrHb5EayiKIWN8iA/hWBblo6hUWm8TtCDwE80WMJus/irwyxOdxeB0MDb14VNJHnXYoLLSl6FfCUYO9nYPTA8Epg9090LprfbBbZ2hY0UlJUXHQp3/vtWkS6EBv8+rPMq5u9692f/dNxJNiqwC1xPE9TCUgCsSdQWgE3XQD25lkG4CN2xmTcOXWBOyser6RN6KnGbKSbmQ3+d0OI1m2W8QzLLkI2sykrWAgJJEtA8vGGW/2Q+CmT3n8zS9wZwu2DCvtuZKZN3xkrLh36yCZuUomQSqGpY8t/25VfHVhw8z4ebGBtfLb0ya9PCaDc+8dGTvk2dsh6z7WzvowlXKUSWo9MJ15a3KrEP2loOr2Ojhw6iW6hf2BDdEccQvZGpaAy7YovSwq8kr7HGllxpd71rkS6G0Sf11sl9OvMK1+jwPPODxjUwkOim9CU3ix1wNjXDfmJSEn618Bs6lpWwUpU+8PCqLMY650zjq8VhCIP17NEKTx3eaLL+s5Pi6yJWaWjTHLR1jYzPSV9VF/6Ojdb/1kO3Mk3uhHC0x6gc1BjlKQ+nQFxTYdaJkZ7ySVxLBbhR1dsboNXp1tCYKW2LRaEzpYcIx2BKNxaL0ZaUnSqfFoiNhHKR/GkX6PWUSAaJelQaqZL1EpoHNsajSEyPSoJ9IjhIxTdjHLmwZvhRDOiFTY/YeQnvrVZmiTQtGncECXtFTBZLOVwwMRgoXHAkXzMzPn1nAJJ8jYSbMDaqN2waGLzNhih/bZynUBMpIWSg7VYi7DRx2m8ALkIdRCJwI6ArJx2EI8kaDWeTQKeAFk9fjl/1AvwktjQ1P7NjyMGQyfd4vjipX6M/i52D7Cq80kqlcxEcGXRr/FEcgs0u5uGgB4VWuMFfpdn2Re6Hi3PqzmxWKsz6+ae2Pn9hXXw/fqM859UiGC0oKYYILJBqJrsn1Z1E5qOs9rQCiUQRREjm8yJcbHF5cUJufX1vAHlefw0XgUoboS3ETfQlTxBC4SOtuE8VPRJTBSCQSjZCpk7Gqzu+masaZ2y7Zjehho4F3g82BNDkAHpORG4+OCS+f6JTPmtRn/PH1kch6d04sp7AQb25aQ/pqUyXeQ8vrebG8OYQdXOQ+585u0sdW9rqalzRURiJ+9F4MweRFrKUjl1GUYhH1A27WOHw5cTFSFPMo9EeUIGnQTZHIaJ7AHLaOKsOODaNF9jkBjYG2QEsQ2xjMUAx2bBEbeTBWMHwskBjngq56S/yfgkBnWBa4K9sqKtq2t1UI8S9He5XuBRbawAdatrQEAi30Aks2+LM8WeCbalVZkWNylvJ+dqJnzVb+OHlSoKW8nPCP7Rd+CcZ2DdWAGqJ2CBFOphgywFFCFBNtfAbGtNPBCwxvygHeYMZMY9ZboBqwq/pVrsbgN5tkv152ODlbMfiqwGMBgxa4Exz3QhovRIUp6acqZmQzRq0ypDXS2TPLT02YIkQETnOE445oOGxOmXAqUJNNG7XgupMjPq2ua9asrj5yY/yuKteO1Kx0YNJTufrirLe1mZnat7OL6rnUdCWenpW6I8mAnbsY8KWs1PuSovCW9A/Z25PQ24a7cNOqgmTkLmBMgh4THgc4b9k2IVv1/g/F5nGljwPLfOgHAzJzh45V/4+WenTzmMtR5Z7us2Tys909UHqrPY7KbckoxRvRHhmVc3cJGE97uml0R1S0jdULVl7EvZtDFVBF35N9cEdjpgmAiOlFZ+Dtoh93+D3zzHr8RRNZQhnCNMNbcegOvpEwZoL+06cJQ07h+th3fZ/7PVbVC6ngTAV/KoLFuO6+2KFcU651gEb5ugPSIb1D+Xp8V4+k3sEIGnw5mYe4If4k1lFYr6SCzmM2EQ8iWtmwjnBI9kTwe1TlfAmXh7H02by9fW2gsjKwtv0aaURKil4OdV7rDL1MXIFNrhdxohcZXYTnq47WisrKitaObbf5+yvkLi5J6lCNZZ+B6GC38VNBZBDidSS/+mSvh6s+srgC8pyKMvDtt+de3c9fU76ZPfuM8ud4Kv0fyP/LqfepMT/3oZxSqpZaTa1DaQYLY8TFsHYbWYsPoRhRWfL5eSSQbhUGgGC3YLbVMk6PitTFNGpAsNrC6D1VNBKgBHMejaiuRWEWGgsSDBTJjqWIl8kJLlsaLJ2tXDr6xGfT85bM2Q06a46x2HTgvdnV8z5YDy/27J4zt6x2VtkzjoYpkq36kaBr4eQSg7tyiVweWubXZugtadl58ydapfbORfKsDTuZ0OBgx4cfdjCf5tbWNITnL120fdOi1RV1C3uKGzNdwYLcMvZ3BxoPyTOCD1XvXTp7U10gWCVmTV9b3r2z0SkGWovb2hp9I89O8a2smlyaO8muMU+dRmtzp60IzAoFpjLr1n388boLyf0dRvxhsHZ0qbWqDkwqvvpkj4l0fY6EIXRi5sQSrAvsVYwXRy4qJ2EVtD1AN7a0HWth9ymvL1xc3WTUKK/TAHA/bXDVtVWfOMfuGxGZv4Ln/jVr9jc3j1yMv0tndmyt9Vq88Y9gH1wtLX3KWjot5++jWHgAoZZkQ14wGQ20Fli71UmKJAy4xKMSTGbVdybW7FDDAut9XpD5AzWrYO7zQ8qffqF8+Ynd/clrHcdyxGy3a/3+mfNnzC/cBsveTjnTvXf1o6vzOlZw7WtqtdmPK/Errz/6NNtD72zmNOZfbmYdTGHfoofqI79Oc+R2n1lrnL6pOm0Up7kwxhTW12Amm7WYkXR2qYrF2AmgmbAsxZjwy1xpg/m1Je2vrp8v/nz2xpmlBg4E9hrMU341wVpTOh/OfmGvAnra8q6uctr60ZQHV3Q+WMQJykMj8ZsWn2QBOmmHMB+m5pDIpTFonYigiaKAhGEiAHF7EliVnQkjoLVIMPtJpBKHYd3A8GYH9jJzrWwmHx5Qjp7vDAX0suGRym1vtm/9W1/HyR8vczfMs6Sk8DSv855/5dlX9oQq52hT8syyp2rx5Id17IAyAM3wIjQPMOHzytEB64q6D5zT91yNbnx3V/nqnd017S9Y0605k3izoXLpsxde2n38yoOV9s1LcjwzNjbdX6asnBVaBj/6/DwKwPkpcqbDG7BnsXoSqWnUAmottYF6jMSdVyYZh3zVXCjwTiwwHH6sGuRiEHQGzuRX6whZkp123oy1BWE2mEfJ/tvIRtM4ZM5bDXiMsPMaAKOTyc5uL57rqyyc5y5JE5pm1i2S2iUX0CcaQ6lC6Zog7JqSqZmYlosl2K6pwNA84zRnQW6SaALYZQGW5lhCtU/W34N6o+bKfZ8cf3/Cl/+iTX3wBzpOY4mRkeNf3rptycGSshQWgGbYt5jFc2e0+DglIrwl6DVWQ7BuwaJ3Xk1J4VL5urnLl/Wf+gHU/hZoZdKNym6lG+I34FaNeZKcSpJIo2IeCVvpdsDGfKvzJnAwmeD37Ow65ZWwSowpgwX5T69s/rB55dP5BcpgDKFV8p7q2sn/1uc93bVzT/w6UrCqDTWvfCq/oCD/qZXNoUj8BL5Kp6GU017frfNXkAtiiyf/SOCEeLqnd8R/Ql9GlCRfctS6k5chvIBuQ1zCCjoCHL2DHNHIXxMJ3kQeO8lbsUXONeSfA5EjcG6/E+KdhN4bP04vBhdi883+BFBzQbxFbvZzQeY9LNBZc0FNfn5NwfDn6rCTnTw6R8o+gfpf5hCom33cRuiTlss3KHmZjD+BPN+5gXuA2ziS/Q73mLxUkpbKN/eqwz5uK0X9F3h2d1V4nGNgZGBgAOJd776+iue3+crAzc4AAje5Bfcg0xz9YHEOBiYQBQA8FQlFAHicY2BkYGBnAAGOPgaG//85+hkYGVCBMgBGGwNYAAAAeJxjYGBgYB8EmKOPgQEAQ04BfgAAAAAAAA4AaAB+AMwA4AECAUIBbAGYAcICGAJYArQC4AMwA7AD3gQwBJYE3AUkBWYFigYgBmYGtAbqB1gIEghYCG4IhAi2COh4nGNgZGBgUGYoZWBnAAEmIOYCQgaG/2A+AwAYCQG2AHicXZBNaoNAGIZfE5PQCKFQ2lUps2oXBfOzzAESyDKBQJdGR2NQR3QSSE/QE/QEPUUPUHqsvsrXjTMw83zPvPMNCuAWP3DQDAejdm1GjzwS7pMmwi75XngAD4/CQ/oX4TFe4Qt7uMMbOzjuDc0EmXCP/C7cJ38Iu+RP4QEe8CU8pP8WHmOPX2EPz87TPo202ey2OjlnQSXV/6arOjWFmvszMWtd6CqwOlKHq6ovycLaWMWVydXKFFZnmVFlZU46tP7R2nI5ncbi/dDkfDtFBA2DDXbYkhKc+V0Bqs5Zt9JM1HQGBRTm/EezTmZNKtpcAMs9Yu6AK9caF76zoLWIWcfMGOSkVduvSWechqZsz040Ib2PY3urxBJTzriT95lipz+TN1fmAAAAeJxtkMl2wjAMRfOAhABlKm2h80C3+ajgCKKDY6cegP59TYBzukAL+z1Zsq8ctaJTTKPrsUQLbXQQI0EXKXroY4AbDDHCGBNMcYsZ7nCPB8yxwCOe8IwXvOIN7/jAJ76wxHfUqWX+OzgumWAjJMV17i0Ndlr6irLKO+qftdT7i6y4uFSUvCknay+lFYZIZaQcmfH/xIFdYn98bqhra1aKTM/6lWMnyaYirx1rFUQZFBkb2zJUtoXeJCeg0WnLtHeSFc3OtrnozNwqi0TkSpBMDB1nSde5oJXW23hTS2/T0LilglXX7dmFVxLnq5U0vYATHFk3zX3BOisoQHNDFDeZnqKDy9hRNawN7Vh727hFzcJ5c8TILrKZfH7tIPxAFP0BpLeJPA==) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-play, .video-js .vjs-play-control .vjs-icon-placeholder, .video-js .vjs-big-play-button .vjs-icon-placeholder:before {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-play:before, .video-js .vjs-play-control .vjs-icon-placeholder:before, .video-js .vjs-big-play-button .vjs-icon-placeholder:before {
+  content: "\F101";
+}
+
+.vjs-icon-play-circle {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-play-circle:before {
+  content: "\F102";
+}
+
+.vjs-icon-pause, .video-js .vjs-play-control.vjs-playing .vjs-icon-placeholder {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-pause:before, .video-js .vjs-play-control.vjs-playing .vjs-icon-placeholder:before {
+  content: "\F103";
+}
+
+.vjs-icon-volume-mute, .video-js .vjs-mute-control.vjs-vol-0 .vjs-icon-placeholder {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-volume-mute:before, .video-js .vjs-mute-control.vjs-vol-0 .vjs-icon-placeholder:before {
+  content: "\F104";
+}
+
+.vjs-icon-volume-low, .video-js .vjs-mute-control.vjs-vol-1 .vjs-icon-placeholder {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-volume-low:before, .video-js .vjs-mute-control.vjs-vol-1 .vjs-icon-placeholder:before {
+  content: "\F105";
+}
+
+.vjs-icon-volume-mid, .video-js .vjs-mute-control.vjs-vol-2 .vjs-icon-placeholder {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-volume-mid:before, .video-js .vjs-mute-control.vjs-vol-2 .vjs-icon-placeholder:before {
+  content: "\F106";
+}
+
+.vjs-icon-volume-high, .video-js .vjs-mute-control .vjs-icon-placeholder {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-volume-high:before, .video-js .vjs-mute-control .vjs-icon-placeholder:before {
+  content: "\F107";
+}
+
+.vjs-icon-fullscreen-enter, .video-js .vjs-fullscreen-control .vjs-icon-placeholder {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-fullscreen-enter:before, .video-js .vjs-fullscreen-control .vjs-icon-placeholder:before {
+  content: "\F108";
+}
+
+.vjs-icon-fullscreen-exit, .video-js.vjs-fullscreen .vjs-fullscreen-control .vjs-icon-placeholder {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-fullscreen-exit:before, .video-js.vjs-fullscreen .vjs-fullscreen-control .vjs-icon-placeholder:before {
+  content: "\F109";
+}
+
+.vjs-icon-square {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-square:before {
+  content: "\F10A";
+}
+
+.vjs-icon-spinner {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-spinner:before {
+  content: "\F10B";
+}
+
+.vjs-icon-subtitles, .video-js .vjs-subs-caps-button .vjs-icon-placeholder,
+.video-js.video-js:lang(en-GB) .vjs-subs-caps-button .vjs-icon-placeholder,
+.video-js.video-js:lang(en-IE) .vjs-subs-caps-button .vjs-icon-placeholder,
+.video-js.video-js:lang(en-AU) .vjs-subs-caps-button .vjs-icon-placeholder,
+.video-js.video-js:lang(en-NZ) .vjs-subs-caps-button .vjs-icon-placeholder, .video-js .vjs-subtitles-button .vjs-icon-placeholder {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-subtitles:before, .video-js .vjs-subs-caps-button .vjs-icon-placeholder:before,
+.video-js.video-js:lang(en-GB) .vjs-subs-caps-button .vjs-icon-placeholder:before,
+.video-js.video-js:lang(en-IE) .vjs-subs-caps-button .vjs-icon-placeholder:before,
+.video-js.video-js:lang(en-AU) .vjs-subs-caps-button .vjs-icon-placeholder:before,
+.video-js.video-js:lang(en-NZ) .vjs-subs-caps-button .vjs-icon-placeholder:before, .video-js .vjs-subtitles-button .vjs-icon-placeholder:before {
+  content: "\F10C";
+}
+
+.vjs-icon-captions, .video-js:lang(en) .vjs-subs-caps-button .vjs-icon-placeholder,
+.video-js:lang(fr-CA) .vjs-subs-caps-button .vjs-icon-placeholder, .video-js .vjs-captions-button .vjs-icon-placeholder {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-captions:before, .video-js:lang(en) .vjs-subs-caps-button .vjs-icon-placeholder:before,
+.video-js:lang(fr-CA) .vjs-subs-caps-button .vjs-icon-placeholder:before, .video-js .vjs-captions-button .vjs-icon-placeholder:before {
+  content: "\F10D";
+}
+
+.vjs-icon-chapters, .video-js .vjs-chapters-button .vjs-icon-placeholder {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-chapters:before, .video-js .vjs-chapters-button .vjs-icon-placeholder:before {
+  content: "\F10E";
+}
+
+.vjs-icon-share {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-share:before {
+  content: "\F10F";
+}
+
+.vjs-icon-cog {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-cog:before {
+  content: "\F110";
+}
+
+.vjs-icon-circle, .vjs-seek-to-live-control .vjs-icon-placeholder, .video-js .vjs-volume-level, .video-js .vjs-play-progress {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-circle:before, .vjs-seek-to-live-control .vjs-icon-placeholder:before, .video-js .vjs-volume-level:before, .video-js .vjs-play-progress:before {
+  content: "\F111";
+}
+
+.vjs-icon-circle-outline {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-circle-outline:before {
+  content: "\F112";
+}
+
+.vjs-icon-circle-inner-circle {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-circle-inner-circle:before {
+  content: "\F113";
+}
+
+.vjs-icon-hd {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-hd:before {
+  content: "\F114";
+}
+
+.vjs-icon-cancel, .video-js .vjs-control.vjs-close-button .vjs-icon-placeholder {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-cancel:before, .video-js .vjs-control.vjs-close-button .vjs-icon-placeholder:before {
+  content: "\F115";
+}
+
+.vjs-icon-replay, .video-js .vjs-play-control.vjs-ended .vjs-icon-placeholder {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-replay:before, .video-js .vjs-play-control.vjs-ended .vjs-icon-placeholder:before {
+  content: "\F116";
+}
+
+.vjs-icon-facebook {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-facebook:before {
+  content: "\F117";
+}
+
+.vjs-icon-gplus {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-gplus:before {
+  content: "\F118";
+}
+
+.vjs-icon-linkedin {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-linkedin:before {
+  content: "\F119";
+}
+
+.vjs-icon-twitter {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-twitter:before {
+  content: "\F11A";
+}
+
+.vjs-icon-tumblr {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-tumblr:before {
+  content: "\F11B";
+}
+
+.vjs-icon-pinterest {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-pinterest:before {
+  content: "\F11C";
+}
+
+.vjs-icon-audio-description, .video-js .vjs-descriptions-button .vjs-icon-placeholder {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-audio-description:before, .video-js .vjs-descriptions-button .vjs-icon-placeholder:before {
+  content: "\F11D";
+}
+
+.vjs-icon-audio, .video-js .vjs-audio-button .vjs-icon-placeholder {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-audio:before, .video-js .vjs-audio-button .vjs-icon-placeholder:before {
+  content: "\F11E";
+}
+
+.vjs-icon-next-item {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-next-item:before {
+  content: "\F11F";
+}
+
+.vjs-icon-previous-item {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-previous-item:before {
+  content: "\F120";
+}
+
+.vjs-icon-picture-in-picture-enter, .video-js .vjs-picture-in-picture-control .vjs-icon-placeholder {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-picture-in-picture-enter:before, .video-js .vjs-picture-in-picture-control .vjs-icon-placeholder:before {
+  content: "\F121";
+}
+
+.vjs-icon-picture-in-picture-exit, .video-js.vjs-picture-in-picture .vjs-picture-in-picture-control .vjs-icon-placeholder {
+  font-family: VideoJS;
+  font-weight: normal;
+  font-style: normal;
+}
+.vjs-icon-picture-in-picture-exit:before, .video-js.vjs-picture-in-picture .vjs-picture-in-picture-control .vjs-icon-placeholder:before {
+  content: "\F122";
+}
+
+.video-js {
+  display: block;
+  vertical-align: top;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: #000;
+  position: relative;
+  padding: 0;
+  font-size: 10px;
+  line-height: 1;
+  font-weight: normal;
+  font-style: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  word-break: initial;
+}
+.video-js:-moz-full-screen {
+  position: absolute;
+}
+.video-js:-webkit-full-screen {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.video-js[tabindex="-1"] {
+  outline: none;
+}
+
+.video-js *,
+.video-js *:before,
+.video-js *:after {
+  box-sizing: inherit;
+}
+
+.video-js ul {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  list-style-position: outside;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.video-js.vjs-fluid,
+.video-js.vjs-16-9,
+.video-js.vjs-4-3 {
+  width: 100%;
+  max-width: 100%;
+  height: 0;
+}
+
+.video-js.vjs-16-9 {
+  padding-top: 56.25%;
+}
+
+.video-js.vjs-4-3 {
+  padding-top: 75%;
+}
+
+.video-js.vjs-fill {
+  width: 100%;
+  height: 100%;
+}
+
+.video-js .vjs-tech {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body.vjs-full-window {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.vjs-full-window .video-js.vjs-fullscreen {
+  position: fixed;
+  overflow: hidden;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.video-js.vjs-fullscreen:not(.vjs-ios-native-fs) {
+  width: 100% !important;
+  height: 100% !important;
+  padding-top: 0 !important;
+}
+
+.video-js.vjs-fullscreen.vjs-user-inactive {
+  cursor: none;
+}
+
+.vjs-hidden {
+  display: none !important;
+}
+
+.vjs-disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.video-js .vjs-offscreen {
+  height: 1px;
+  left: -9999px;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+
+.vjs-lock-showing {
+  display: block !important;
+  opacity: 1;
+  visibility: visible;
+}
+
+.vjs-no-js {
+  padding: 20px;
+  color: #fff;
+  background-color: #000;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  width: 300px;
+  height: 150px;
+  margin: 0px auto;
+}
+
+.vjs-no-js a,
+.vjs-no-js a:visited {
+  color: #66A8CC;
+}
+
+.video-js .vjs-big-play-button {
+  font-size: 3em;
+  line-height: 1.5em;
+  height: 1.63332em;
+  width: 3em;
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 0;
+  cursor: pointer;
+  opacity: 1;
+  border: 0.06666em solid #fff;
+  background-color: #2B333F;
+  background-color: rgba(43, 51, 63, 0.7);
+  border-radius: 0.3em;
+  transition: all 0.4s;
+}
+.vjs-big-play-centered .vjs-big-play-button {
+  top: 50%;
+  left: 50%;
+  margin-top: -0.81666em;
+  margin-left: -1.5em;
+}
+
+.video-js:hover .vjs-big-play-button,
+.video-js .vjs-big-play-button:focus {
+  border-color: #fff;
+  background-color: #73859f;
+  background-color: rgba(115, 133, 159, 0.5);
+  transition: all 0s;
+}
+
+.vjs-controls-disabled .vjs-big-play-button,
+.vjs-has-started .vjs-big-play-button,
+.vjs-using-native-controls .vjs-big-play-button,
+.vjs-error .vjs-big-play-button {
+  display: none;
+}
+
+.vjs-has-started.vjs-paused.vjs-show-big-play-button-on-pause .vjs-big-play-button {
+  display: block;
+}
+
+.video-js button {
+  background: none;
+  border: none;
+  color: inherit;
+  display: inline-block;
+  font-size: inherit;
+  line-height: inherit;
+  text-transform: none;
+  text-decoration: none;
+  transition: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.vjs-control .vjs-button {
+  width: 100%;
+  height: 100%;
+}
+
+.video-js .vjs-control.vjs-close-button {
+  cursor: pointer;
+  height: 3em;
+  position: absolute;
+  right: 0;
+  top: 0.5em;
+  z-index: 2;
+}
+.video-js .vjs-modal-dialog {
+  background: rgba(0, 0, 0, 0.8);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0));
+  overflow: auto;
+}
+
+.video-js .vjs-modal-dialog > * {
+  box-sizing: border-box;
+}
+
+.vjs-modal-dialog .vjs-modal-dialog-content {
+  font-size: 1.2em;
+  line-height: 1.5;
+  padding: 20px 24px;
+  z-index: 1;
+}
+
+.vjs-menu-button {
+  cursor: pointer;
+}
+
+.vjs-menu-button.vjs-disabled {
+  cursor: default;
+}
+
+.vjs-workinghover .vjs-menu-button.vjs-disabled:hover .vjs-menu {
+  display: none;
+}
+
+.vjs-menu .vjs-menu-content {
+  display: block;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: auto;
+}
+
+.vjs-menu .vjs-menu-content > * {
+  box-sizing: border-box;
+}
+
+.vjs-scrubbing .vjs-control.vjs-menu-button:hover .vjs-menu {
+  display: none;
+}
+
+.vjs-menu li {
+  list-style: none;
+  margin: 0;
+  padding: 0.2em 0;
+  line-height: 1.4em;
+  font-size: 1.2em;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+.vjs-menu li.vjs-menu-item:focus,
+.vjs-menu li.vjs-menu-item:hover,
+.js-focus-visible .vjs-menu li.vjs-menu-item:hover {
+  background-color: #73859f;
+  background-color: rgba(115, 133, 159, 0.5);
+}
+
+.vjs-menu li.vjs-selected,
+.vjs-menu li.vjs-selected:focus,
+.vjs-menu li.vjs-selected:hover,
+.js-focus-visible .vjs-menu li.vjs-selected:hover {
+  background-color: #fff;
+  color: #2B333F;
+}
+
+.vjs-menu li.vjs-menu-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1em;
+  line-height: 2em;
+  padding: 0;
+  margin: 0 0 0.3em 0;
+  font-weight: bold;
+  cursor: default;
+}
+
+.vjs-menu-button-popup .vjs-menu {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 10em;
+  left: -3em;
+  height: 0em;
+  margin-bottom: 1.5em;
+  border-top-color: rgba(43, 51, 63, 0.7);
+}
+
+.vjs-menu-button-popup .vjs-menu .vjs-menu-content {
+  background-color: #2B333F;
+  background-color: rgba(43, 51, 63, 0.7);
+  position: absolute;
+  width: 100%;
+  bottom: 1.5em;
+  max-height: 15em;
+}
+
+.vjs-layout-tiny .vjs-menu-button-popup .vjs-menu .vjs-menu-content,
+.vjs-layout-x-small .vjs-menu-button-popup .vjs-menu .vjs-menu-content {
+  max-height: 5em;
+}
+
+.vjs-layout-small .vjs-menu-button-popup .vjs-menu .vjs-menu-content {
+  max-height: 10em;
+}
+
+.vjs-layout-medium .vjs-menu-button-popup .vjs-menu .vjs-menu-content {
+  max-height: 14em;
+}
+
+.vjs-layout-large .vjs-menu-button-popup .vjs-menu .vjs-menu-content,
+.vjs-layout-x-large .vjs-menu-button-popup .vjs-menu .vjs-menu-content,
+.vjs-layout-huge .vjs-menu-button-popup .vjs-menu .vjs-menu-content {
+  max-height: 25em;
+}
+
+.vjs-workinghover .vjs-menu-button-popup.vjs-hover .vjs-menu,
+.vjs-menu-button-popup .vjs-menu.vjs-lock-showing {
+  display: block;
+}
+
+.video-js .vjs-menu-button-inline {
+  transition: all 0.4s;
+  overflow: hidden;
+}
+
+.video-js .vjs-menu-button-inline:before {
+  width: 2.222222222em;
+}
+
+.video-js .vjs-menu-button-inline:hover,
+.video-js .vjs-menu-button-inline:focus,
+.video-js .vjs-menu-button-inline.vjs-slider-active,
+.video-js.vjs-no-flex .vjs-menu-button-inline {
+  width: 12em;
+}
+
+.vjs-menu-button-inline .vjs-menu {
+  opacity: 0;
+  height: 100%;
+  width: auto;
+  position: absolute;
+  left: 4em;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  transition: all 0.4s;
+}
+
+.vjs-menu-button-inline:hover .vjs-menu,
+.vjs-menu-button-inline:focus .vjs-menu,
+.vjs-menu-button-inline.vjs-slider-active .vjs-menu {
+  display: block;
+  opacity: 1;
+}
+
+.vjs-no-flex .vjs-menu-button-inline .vjs-menu {
+  display: block;
+  opacity: 1;
+  position: relative;
+  width: auto;
+}
+
+.vjs-no-flex .vjs-menu-button-inline:hover .vjs-menu,
+.vjs-no-flex .vjs-menu-button-inline:focus .vjs-menu,
+.vjs-no-flex .vjs-menu-button-inline.vjs-slider-active .vjs-menu {
+  width: auto;
+}
+
+.vjs-menu-button-inline .vjs-menu-content {
+  width: auto;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.video-js .vjs-control-bar {
+  display: none;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3em;
+  background-color: #2B333F;
+  background-color: rgba(43, 51, 63, 0.7);
+}
+
+.vjs-has-started .vjs-control-bar {
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.1s, opacity 0.1s;
+}
+
+.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-control-bar {
+  visibility: visible;
+  opacity: 0;
+  transition: visibility 1s, opacity 1s;
+}
+
+.vjs-controls-disabled .vjs-control-bar,
+.vjs-using-native-controls .vjs-control-bar,
+.vjs-error .vjs-control-bar {
+  display: none !important;
+}
+
+.vjs-audio.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-control-bar {
+  opacity: 1;
+  visibility: visible;
+}
+
+.vjs-has-started.vjs-no-flex .vjs-control-bar {
+  display: table;
+}
+
+.video-js .vjs-control {
+  position: relative;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 4em;
+  flex: none;
+}
+
+.vjs-button > .vjs-icon-placeholder:before {
+  font-size: 1.8em;
+  line-height: 1.67;
+}
+
+.video-js .vjs-control:focus:before,
+.video-js .vjs-control:hover:before,
+.video-js .vjs-control:focus {
+  text-shadow: 0em 0em 1em white;
+}
+
+.video-js .vjs-control-text {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.vjs-no-flex .vjs-control {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.video-js .vjs-custom-control-spacer {
+  display: none;
+}
+
+.video-js .vjs-progress-control {
+  cursor: pointer;
+  flex: auto;
+  display: flex;
+  align-items: center;
+  min-width: 4em;
+  touch-action: none;
+}
+
+.video-js .vjs-progress-control.disabled {
+  cursor: default;
+}
+
+.vjs-live .vjs-progress-control {
+  display: none;
+}
+
+.vjs-liveui .vjs-progress-control {
+  display: flex;
+  align-items: center;
+}
+
+.vjs-no-flex .vjs-progress-control {
+  width: auto;
+}
+
+.video-js .vjs-progress-holder {
+  flex: auto;
+  transition: all 0.2s;
+  height: 0.3em;
+}
+
+.video-js .vjs-progress-control .vjs-progress-holder {
+  margin: 0 10px;
+}
+
+.video-js .vjs-progress-control:hover .vjs-progress-holder {
+  font-size: 1.6666666667em;
+}
+
+.video-js .vjs-progress-control:hover .vjs-progress-holder.disabled {
+  font-size: 1em;
+}
+
+.video-js .vjs-progress-holder .vjs-play-progress,
+.video-js .vjs-progress-holder .vjs-load-progress,
+.video-js .vjs-progress-holder .vjs-load-progress div {
+  position: absolute;
+  display: block;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 0;
+}
+
+.video-js .vjs-play-progress {
+  background-color: #fff;
+}
+.video-js .vjs-play-progress:before {
+  font-size: 0.9em;
+  position: absolute;
+  right: -0.5em;
+  top: -0.3333333333em;
+  z-index: 1;
+}
+
+.video-js .vjs-load-progress {
+  background: rgba(115, 133, 159, 0.5);
+}
+
+.video-js .vjs-load-progress div {
+  background: rgba(115, 133, 159, 0.75);
+}
+
+.video-js .vjs-time-tooltip {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.3em;
+  color: #000;
+  float: right;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  padding: 6px 8px 8px 8px;
+  pointer-events: none;
+  position: absolute;
+  top: -3.4em;
+  visibility: hidden;
+  z-index: 1;
+}
+
+.video-js .vjs-progress-holder:focus .vjs-time-tooltip {
+  display: none;
+}
+
+.video-js .vjs-progress-control:hover .vjs-time-tooltip,
+.video-js .vjs-progress-control:hover .vjs-progress-holder:focus .vjs-time-tooltip {
+  display: block;
+  font-size: 0.6em;
+  visibility: visible;
+}
+
+.video-js .vjs-progress-control.disabled:hover .vjs-time-tooltip {
+  font-size: 1em;
+}
+
+.video-js .vjs-progress-control .vjs-mouse-display {
+  display: none;
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: #000;
+  z-index: 1;
+}
+
+.vjs-no-flex .vjs-progress-control .vjs-mouse-display {
+  z-index: 0;
+}
+
+.video-js .vjs-progress-control:hover .vjs-mouse-display {
+  display: block;
+}
+
+.video-js.vjs-user-inactive .vjs-progress-control .vjs-mouse-display {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 1s, opacity 1s;
+}
+
+.video-js.vjs-user-inactive.vjs-no-flex .vjs-progress-control .vjs-mouse-display {
+  display: none;
+}
+
+.vjs-mouse-display .vjs-time-tooltip {
+  color: #fff;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.video-js .vjs-slider {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 0.45em 0 0.45em;
+  /* iOS Safari */
+  -webkit-touch-callout: none;
+  /* Safari */
+  -webkit-user-select: none;
+  /* Konqueror HTML */
+  /* Firefox */
+  -moz-user-select: none;
+  /* Internet Explorer/Edge */
+  -ms-user-select: none;
+  /* Non-prefixed version, currently supported by Chrome and Opera */
+  user-select: none;
+  background-color: #73859f;
+  background-color: rgba(115, 133, 159, 0.5);
+}
+
+.video-js .vjs-slider.disabled {
+  cursor: default;
+}
+
+.video-js .vjs-slider:focus {
+  text-shadow: 0em 0em 1em white;
+  box-shadow: 0 0 1em #fff;
+}
+
+.video-js .vjs-mute-control {
+  cursor: pointer;
+  flex: none;
+}
+.video-js .vjs-volume-control {
+  cursor: pointer;
+  margin-right: 1em;
+  display: flex;
+}
+
+.video-js .vjs-volume-control.vjs-volume-horizontal {
+  width: 5em;
+}
+
+.video-js .vjs-volume-panel .vjs-volume-control {
+  visibility: visible;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  margin-left: -1px;
+}
+
+.video-js .vjs-volume-panel {
+  transition: width 1s;
+}
+.video-js .vjs-volume-panel.vjs-hover .vjs-volume-control, .video-js .vjs-volume-panel:active .vjs-volume-control, .video-js .vjs-volume-panel:focus .vjs-volume-control, .video-js .vjs-volume-panel .vjs-volume-control:active, .video-js .vjs-volume-panel.vjs-hover .vjs-mute-control ~ .vjs-volume-control, .video-js .vjs-volume-panel .vjs-volume-control.vjs-slider-active {
+  visibility: visible;
+  opacity: 1;
+  position: relative;
+  transition: visibility 0.1s, opacity 0.1s, height 0.1s, width 0.1s, left 0s, top 0s;
+}
+.video-js .vjs-volume-panel.vjs-hover .vjs-volume-control.vjs-volume-horizontal, .video-js .vjs-volume-panel:active .vjs-volume-control.vjs-volume-horizontal, .video-js .vjs-volume-panel:focus .vjs-volume-control.vjs-volume-horizontal, .video-js .vjs-volume-panel .vjs-volume-control:active.vjs-volume-horizontal, .video-js .vjs-volume-panel.vjs-hover .vjs-mute-control ~ .vjs-volume-control.vjs-volume-horizontal, .video-js .vjs-volume-panel .vjs-volume-control.vjs-slider-active.vjs-volume-horizontal {
+  width: 5em;
+  height: 3em;
+  margin-right: 0;
+}
+.video-js .vjs-volume-panel.vjs-hover .vjs-volume-control.vjs-volume-vertical, .video-js .vjs-volume-panel:active .vjs-volume-control.vjs-volume-vertical, .video-js .vjs-volume-panel:focus .vjs-volume-control.vjs-volume-vertical, .video-js .vjs-volume-panel .vjs-volume-control:active.vjs-volume-vertical, .video-js .vjs-volume-panel.vjs-hover .vjs-mute-control ~ .vjs-volume-control.vjs-volume-vertical, .video-js .vjs-volume-panel .vjs-volume-control.vjs-slider-active.vjs-volume-vertical {
+  left: -3.5em;
+  transition: left 0s;
+}
+.video-js .vjs-volume-panel.vjs-volume-panel-horizontal.vjs-hover, .video-js .vjs-volume-panel.vjs-volume-panel-horizontal:active, .video-js .vjs-volume-panel.vjs-volume-panel-horizontal.vjs-slider-active {
+  width: 10em;
+  transition: width 0.1s;
+}
+.video-js .vjs-volume-panel.vjs-volume-panel-horizontal.vjs-mute-toggle-only {
+  width: 4em;
+}
+
+.video-js .vjs-volume-panel .vjs-volume-control.vjs-volume-vertical {
+  height: 8em;
+  width: 3em;
+  left: -3000em;
+  transition: visibility 1s, opacity 1s, height 1s 1s, width 1s 1s, left 1s 1s, top 1s 1s;
+}
+
+.video-js .vjs-volume-panel .vjs-volume-control.vjs-volume-horizontal {
+  transition: visibility 1s, opacity 1s, height 1s 1s, width 1s, left 1s 1s, top 1s 1s;
+}
+
+.video-js.vjs-no-flex .vjs-volume-panel .vjs-volume-control.vjs-volume-horizontal {
+  width: 5em;
+  height: 3em;
+  visibility: visible;
+  opacity: 1;
+  position: relative;
+  transition: none;
+}
+
+.video-js.vjs-no-flex .vjs-volume-control.vjs-volume-vertical,
+.video-js.vjs-no-flex .vjs-volume-panel .vjs-volume-control.vjs-volume-vertical {
+  position: absolute;
+  bottom: 3em;
+  left: 0.5em;
+}
+
+.video-js .vjs-volume-panel {
+  display: flex;
+}
+
+.video-js .vjs-volume-bar {
+  margin: 1.35em 0.45em;
+}
+
+.vjs-volume-bar.vjs-slider-horizontal {
+  width: 5em;
+  height: 0.3em;
+}
+
+.vjs-volume-bar.vjs-slider-vertical {
+  width: 0.3em;
+  height: 5em;
+  margin: 1.35em auto;
+}
+
+.video-js .vjs-volume-level {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+}
+.video-js .vjs-volume-level:before {
+  position: absolute;
+  font-size: 0.9em;
+}
+
+.vjs-slider-vertical .vjs-volume-level {
+  width: 0.3em;
+}
+.vjs-slider-vertical .vjs-volume-level:before {
+  top: -0.5em;
+  left: -0.3em;
+}
+
+.vjs-slider-horizontal .vjs-volume-level {
+  height: 0.3em;
+}
+.vjs-slider-horizontal .vjs-volume-level:before {
+  top: -0.3em;
+  right: -0.5em;
+}
+
+.video-js .vjs-volume-panel.vjs-volume-panel-vertical {
+  width: 4em;
+}
+
+.vjs-volume-bar.vjs-slider-vertical .vjs-volume-level {
+  height: 100%;
+}
+
+.vjs-volume-bar.vjs-slider-horizontal .vjs-volume-level {
+  width: 100%;
+}
+
+.video-js .vjs-volume-vertical {
+  width: 3em;
+  height: 8em;
+  bottom: 8em;
+  background-color: #2B333F;
+  background-color: rgba(43, 51, 63, 0.7);
+}
+
+.video-js .vjs-volume-horizontal .vjs-menu {
+  left: -2em;
+}
+
+.vjs-poster {
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-color: #000000;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+}
+
+.vjs-has-started .vjs-poster {
+  display: none;
+}
+
+.vjs-audio.vjs-has-started .vjs-poster {
+  display: block;
+}
+
+.vjs-using-native-controls .vjs-poster {
+  display: none;
+}
+
+.video-js .vjs-live-control {
+  display: flex;
+  align-items: flex-start;
+  flex: auto;
+  font-size: 1em;
+  line-height: 3em;
+}
+
+.vjs-no-flex .vjs-live-control {
+  display: table-cell;
+  width: auto;
+  text-align: left;
+}
+
+.video-js:not(.vjs-live) .vjs-live-control,
+.video-js.vjs-liveui .vjs-live-control {
+  display: none;
+}
+
+.video-js .vjs-seek-to-live-control {
+  align-items: center;
+  cursor: pointer;
+  flex: none;
+  display: inline-flex;
+  height: 100%;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  font-size: 1em;
+  line-height: 3em;
+  width: auto;
+  min-width: 4em;
+}
+
+.vjs-no-flex .vjs-seek-to-live-control {
+  display: table-cell;
+  width: auto;
+  text-align: left;
+}
+
+.video-js.vjs-live:not(.vjs-liveui) .vjs-seek-to-live-control,
+.video-js:not(.vjs-live) .vjs-seek-to-live-control {
+  display: none;
+}
+
+.vjs-seek-to-live-control.vjs-control.vjs-at-live-edge {
+  cursor: auto;
+}
+
+.vjs-seek-to-live-control .vjs-icon-placeholder {
+  margin-right: 0.5em;
+  color: #888;
+}
+
+.vjs-seek-to-live-control.vjs-control.vjs-at-live-edge .vjs-icon-placeholder {
+  color: red;
+}
+
+.video-js .vjs-time-control {
+  flex: none;
+  font-size: 1em;
+  line-height: 3em;
+  min-width: 2em;
+  width: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.vjs-live .vjs-time-control {
+  display: none;
+}
+
+.video-js .vjs-current-time,
+.vjs-no-flex .vjs-current-time {
+  display: none;
+}
+
+.video-js .vjs-duration,
+.vjs-no-flex .vjs-duration {
+  display: none;
+}
+
+.vjs-time-divider {
+  display: none;
+  line-height: 3em;
+}
+
+.vjs-live .vjs-time-divider {
+  display: none;
+}
+
+.video-js .vjs-play-control {
+  cursor: pointer;
+}
+
+.video-js .vjs-play-control .vjs-icon-placeholder {
+  flex: none;
+}
+
+.vjs-text-track-display {
+  position: absolute;
+  bottom: 3em;
+  left: 0;
+  right: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+.video-js.vjs-user-inactive.vjs-playing .vjs-text-track-display {
+  bottom: 1em;
+}
+
+.video-js .vjs-text-track {
+  font-size: 1.4em;
+  text-align: center;
+  margin-bottom: 0.1em;
+}
+
+.vjs-subtitles {
+  color: #fff;
+}
+
+.vjs-captions {
+  color: #fc6;
+}
+
+.vjs-tt-cue {
+  display: block;
+}
+
+video::-webkit-media-text-track-display {
+  transform: translateY(-3em);
+}
+
+.video-js.vjs-user-inactive.vjs-playing video::-webkit-media-text-track-display {
+  transform: translateY(-1.5em);
+}
+
+.video-js .vjs-picture-in-picture-control {
+  cursor: pointer;
+  flex: none;
+}
+.video-js .vjs-fullscreen-control {
+  cursor: pointer;
+  flex: none;
+}
+.vjs-playback-rate > .vjs-menu-button,
+.vjs-playback-rate .vjs-playback-rate-value {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.vjs-playback-rate .vjs-playback-rate-value {
+  pointer-events: none;
+  font-size: 1.5em;
+  line-height: 2;
+  text-align: center;
+}
+
+.vjs-playback-rate .vjs-menu {
+  width: 4em;
+  left: 0em;
+}
+
+.vjs-error .vjs-error-display .vjs-modal-dialog-content {
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.vjs-error .vjs-error-display:before {
+  color: #fff;
+  content: "X";
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 4em;
+  left: 0;
+  line-height: 1;
+  margin-top: -0.5em;
+  position: absolute;
+  text-shadow: 0.05em 0.05em 0.1em #000;
+  text-align: center;
+  top: 50%;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.vjs-loading-spinner {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+  opacity: 0.85;
+  text-align: left;
+  border: 6px solid rgba(43, 51, 63, 0.7);
+  box-sizing: border-box;
+  background-clip: padding-box;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  visibility: hidden;
+}
+
+.vjs-seeking .vjs-loading-spinner,
+.vjs-waiting .vjs-loading-spinner {
+  display: block;
+  -webkit-animation: vjs-spinner-show 0s linear 0.3s forwards;
+          animation: vjs-spinner-show 0s linear 0.3s forwards;
+}
+
+.vjs-loading-spinner:before,
+.vjs-loading-spinner:after {
+  content: "";
+  position: absolute;
+  margin: -6px;
+  box-sizing: inherit;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  opacity: 1;
+  border: inherit;
+  border-color: transparent;
+  border-top-color: white;
+}
+
+.vjs-seeking .vjs-loading-spinner:before,
+.vjs-seeking .vjs-loading-spinner:after,
+.vjs-waiting .vjs-loading-spinner:before,
+.vjs-waiting .vjs-loading-spinner:after {
+  -webkit-animation: vjs-spinner-spin 1.1s cubic-bezier(0.6, 0.2, 0, 0.8) infinite, vjs-spinner-fade 1.1s linear infinite;
+  animation: vjs-spinner-spin 1.1s cubic-bezier(0.6, 0.2, 0, 0.8) infinite, vjs-spinner-fade 1.1s linear infinite;
+}
+
+.vjs-seeking .vjs-loading-spinner:before,
+.vjs-waiting .vjs-loading-spinner:before {
+  border-top-color: white;
+}
+
+.vjs-seeking .vjs-loading-spinner:after,
+.vjs-waiting .vjs-loading-spinner:after {
+  border-top-color: white;
+  -webkit-animation-delay: 0.44s;
+  animation-delay: 0.44s;
+}
+
+@keyframes vjs-spinner-show {
+  to {
+    visibility: visible;
+  }
+}
+@-webkit-keyframes vjs-spinner-show {
+  to {
+    visibility: visible;
+  }
+}
+@keyframes vjs-spinner-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes vjs-spinner-spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes vjs-spinner-fade {
+  0% {
+    border-top-color: #73859f;
+  }
+  20% {
+    border-top-color: #73859f;
+  }
+  35% {
+    border-top-color: white;
+  }
+  60% {
+    border-top-color: #73859f;
+  }
+  100% {
+    border-top-color: #73859f;
+  }
+}
+@-webkit-keyframes vjs-spinner-fade {
+  0% {
+    border-top-color: #73859f;
+  }
+  20% {
+    border-top-color: #73859f;
+  }
+  35% {
+    border-top-color: white;
+  }
+  60% {
+    border-top-color: #73859f;
+  }
+  100% {
+    border-top-color: #73859f;
+  }
+}
+.vjs-chapters-button .vjs-menu ul {
+  width: 24em;
+}
+
+.video-js .vjs-subs-caps-button + .vjs-menu .vjs-captions-menu-item .vjs-menu-item-text .vjs-icon-placeholder {
+  vertical-align: middle;
+  display: inline-block;
+  margin-bottom: -0.1em;
+}
+
+.video-js .vjs-subs-caps-button + .vjs-menu .vjs-captions-menu-item .vjs-menu-item-text .vjs-icon-placeholder:before {
+  font-family: VideoJS;
+  content: "\F10D";
+  font-size: 1.5em;
+  line-height: inherit;
+}
+
+.video-js .vjs-audio-button + .vjs-menu .vjs-main-desc-menu-item .vjs-menu-item-text .vjs-icon-placeholder {
+  vertical-align: middle;
+  display: inline-block;
+  margin-bottom: -0.1em;
+}
+
+.video-js .vjs-audio-button + .vjs-menu .vjs-main-desc-menu-item .vjs-menu-item-text .vjs-icon-placeholder:before {
+  font-family: VideoJS;
+  content: " \F11D";
+  font-size: 1.5em;
+  line-height: inherit;
+}
+
+.video-js:not(.vjs-fullscreen).vjs-layout-small .vjs-current-time,
+.video-js:not(.vjs-fullscreen).vjs-layout-small .vjs-time-divider,
+.video-js:not(.vjs-fullscreen).vjs-layout-small .vjs-duration,
+.video-js:not(.vjs-fullscreen).vjs-layout-small .vjs-remaining-time,
+.video-js:not(.vjs-fullscreen).vjs-layout-small .vjs-playback-rate,
+.video-js:not(.vjs-fullscreen).vjs-layout-small .vjs-chapters-button,
+.video-js:not(.vjs-fullscreen).vjs-layout-small .vjs-descriptions-button,
+.video-js:not(.vjs-fullscreen).vjs-layout-small .vjs-captions-button,
+.video-js:not(.vjs-fullscreen).vjs-layout-small .vjs-subtitles-button,
+.video-js:not(.vjs-fullscreen).vjs-layout-small .vjs-audio-button,
+.video-js:not(.vjs-fullscreen).vjs-layout-small .vjs-volume-control, .video-js:not(.vjs-fullscreen).vjs-layout-x-small .vjs-current-time,
+.video-js:not(.vjs-fullscreen).vjs-layout-x-small .vjs-time-divider,
+.video-js:not(.vjs-fullscreen).vjs-layout-x-small .vjs-duration,
+.video-js:not(.vjs-fullscreen).vjs-layout-x-small .vjs-remaining-time,
+.video-js:not(.vjs-fullscreen).vjs-layout-x-small .vjs-playback-rate,
+.video-js:not(.vjs-fullscreen).vjs-layout-x-small .vjs-chapters-button,
+.video-js:not(.vjs-fullscreen).vjs-layout-x-small .vjs-descriptions-button,
+.video-js:not(.vjs-fullscreen).vjs-layout-x-small .vjs-captions-button,
+.video-js:not(.vjs-fullscreen).vjs-layout-x-small .vjs-subtitles-button,
+.video-js:not(.vjs-fullscreen).vjs-layout-x-small .vjs-audio-button,
+.video-js:not(.vjs-fullscreen).vjs-layout-x-small .vjs-volume-control, .video-js:not(.vjs-fullscreen).vjs-layout-tiny .vjs-current-time,
+.video-js:not(.vjs-fullscreen).vjs-layout-tiny .vjs-time-divider,
+.video-js:not(.vjs-fullscreen).vjs-layout-tiny .vjs-duration,
+.video-js:not(.vjs-fullscreen).vjs-layout-tiny .vjs-remaining-time,
+.video-js:not(.vjs-fullscreen).vjs-layout-tiny .vjs-playback-rate,
+.video-js:not(.vjs-fullscreen).vjs-layout-tiny .vjs-chapters-button,
+.video-js:not(.vjs-fullscreen).vjs-layout-tiny .vjs-descriptions-button,
+.video-js:not(.vjs-fullscreen).vjs-layout-tiny .vjs-captions-button,
+.video-js:not(.vjs-fullscreen).vjs-layout-tiny .vjs-subtitles-button,
+.video-js:not(.vjs-fullscreen).vjs-layout-tiny .vjs-audio-button,
+.video-js:not(.vjs-fullscreen).vjs-layout-tiny .vjs-volume-control {
+  display: none;
+}
+.video-js:not(.vjs-fullscreen).vjs-layout-small .vjs-volume-panel.vjs-volume-panel-horizontal:hover,
+.video-js:not(.vjs-fullscreen).vjs-layout-small .vjs-volume-panel.vjs-volume-panel-horizontal:active,
+.video-js:not(.vjs-fullscreen).vjs-layout-small .vjs-volume-panel.vjs-volume-panel-horizontal.vjs-slider-active, .video-js:not(.vjs-fullscreen).vjs-layout-x-small .vjs-volume-panel.vjs-volume-panel-horizontal:hover,
+.video-js:not(.vjs-fullscreen).vjs-layout-x-small .vjs-volume-panel.vjs-volume-panel-horizontal:active,
+.video-js:not(.vjs-fullscreen).vjs-layout-x-small .vjs-volume-panel.vjs-volume-panel-horizontal.vjs-slider-active, .video-js:not(.vjs-fullscreen).vjs-layout-tiny .vjs-volume-panel.vjs-volume-panel-horizontal:hover,
+.video-js:not(.vjs-fullscreen).vjs-layout-tiny .vjs-volume-panel.vjs-volume-panel-horizontal:active,
+.video-js:not(.vjs-fullscreen).vjs-layout-tiny .vjs-volume-panel.vjs-volume-panel-horizontal.vjs-slider-active {
+  width: auto;
+  width: initial;
+}
+.video-js:not(.vjs-fullscreen).vjs-layout-x-small:not(.vjs-liveui) .vjs-subs-caps-button, .video-js:not(.vjs-fullscreen).vjs-layout-x-small:not(.vjs-live) .vjs-subs-caps-button, .video-js:not(.vjs-fullscreen).vjs-layout-tiny .vjs-subs-caps-button {
+  display: none;
+}
+.video-js:not(.vjs-fullscreen).vjs-layout-x-small.vjs-liveui .vjs-custom-control-spacer, .video-js:not(.vjs-fullscreen).vjs-layout-tiny .vjs-custom-control-spacer {
+  flex: auto;
+  display: block;
+}
+.video-js:not(.vjs-fullscreen).vjs-layout-x-small.vjs-liveui.vjs-no-flex .vjs-custom-control-spacer, .video-js:not(.vjs-fullscreen).vjs-layout-tiny.vjs-no-flex .vjs-custom-control-spacer {
+  width: auto;
+}
+.video-js:not(.vjs-fullscreen).vjs-layout-x-small.vjs-liveui .vjs-progress-control, .video-js:not(.vjs-fullscreen).vjs-layout-tiny .vjs-progress-control {
+  display: none;
+}
+
+.vjs-modal-dialog.vjs-text-track-settings {
+  background-color: #2B333F;
+  background-color: rgba(43, 51, 63, 0.75);
+  color: #fff;
+  height: 70%;
+}
+
+.vjs-text-track-settings .vjs-modal-dialog-content {
+  display: table;
+}
+
+.vjs-text-track-settings .vjs-track-settings-colors,
+.vjs-text-track-settings .vjs-track-settings-font,
+.vjs-text-track-settings .vjs-track-settings-controls {
+  display: table-cell;
+}
+
+.vjs-text-track-settings .vjs-track-settings-controls {
+  text-align: right;
+  vertical-align: bottom;
+}
+
+@supports (display: grid) {
+  .vjs-text-track-settings .vjs-modal-dialog-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 20px 24px 0px 24px;
+  }
+
+  .vjs-track-settings-controls .vjs-default-button {
+    margin-bottom: 20px;
+  }
+
+  .vjs-text-track-settings .vjs-track-settings-controls {
+    grid-column: 1/-1;
+  }
+
+  .vjs-layout-small .vjs-text-track-settings .vjs-modal-dialog-content,
+.vjs-layout-x-small .vjs-text-track-settings .vjs-modal-dialog-content,
+.vjs-layout-tiny .vjs-text-track-settings .vjs-modal-dialog-content {
+    grid-template-columns: 1fr;
+  }
+}
+.vjs-track-setting > select {
+  margin-right: 1em;
+  margin-bottom: 0.5em;
+}
+
+.vjs-text-track-settings fieldset {
+  margin: 5px;
+  padding: 3px;
+  border: none;
+}
+
+.vjs-text-track-settings fieldset span {
+  display: inline-block;
+}
+
+.vjs-text-track-settings fieldset span > select {
+  max-width: 7.3em;
+}
+
+.vjs-text-track-settings legend {
+  color: #fff;
+  margin: 0 0 5px 0;
+}
+
+.vjs-text-track-settings .vjs-label {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  display: block;
+  margin: 0 0 5px 0;
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.vjs-track-settings-controls button:focus,
+.vjs-track-settings-controls button:active {
+  outline-style: solid;
+  outline-width: medium;
+  background-image: linear-gradient(0deg, #fff 88%, #73859f 100%);
+}
+
+.vjs-track-settings-controls button:hover {
+  color: rgba(43, 51, 63, 0.75);
+}
+
+.vjs-track-settings-controls button {
+  background-color: #fff;
+  background-image: linear-gradient(-180deg, #fff 88%, #73859f 100%);
+  color: #2B333F;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.vjs-track-settings-controls .vjs-default-button {
+  margin-right: 1em;
+}
+
+@media print {
+  .video-js > *:not(.vjs-tech):not(.vjs-poster) {
+    visibility: hidden;
+  }
+}
+.vjs-resize-manager {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  z-index: -1000;
+}
+
+.js-focus-visible .video-js *:focus:not(.focus-visible) {
+  outline: none;
+  background: none;
+}
+
+.video-js *:focus:not(:focus-visible),
+.video-js .vjs-menu *:focus:not(:focus-visible) {
+  outline: none;
+  background: none;
+}
+</style><style>.video__el{width:100%}.video-js .vjs-text-track-display>div>div>div{background:rgba(0,0,0,0.6) !important;line-height:1.54em !important;font-size:1em !important;padding:2px 5px;font-family:"Open Sans", Arial, sans-serif;font-weight:bold;color:#fafbfc;text-shadow:0.6px 0.6px 1px #1F2932,0.6px 0.6px 1px #1F2932,0.6px 0.6px 1px #1F2932,0.6px 0.6px 1px #1F2932,0.6px 0.6px 1px #1F2932,0.6px 0.6px 1px #1F2932}.video-js .vjs-control-bar .vjs-play-progress:before,.video-js .vjs-control-bar .vjs-slider-horizontal .vjs-volume-level:before{top:-.5em}.video-js .vjs-http-source-selector{display:none}.video-js .vjs-http-source-selector>button.vjs-button{display:flex;align-items:center;justify-content:center;font-size:0.95rem}.video-js.vjs-show-quality-selector .vjs-http-source-selector{display:inline-block}@media (max-width: 650px){.video-js .vjs-picture-in-picture-control{display:none}}
+</style><style>._2nvHtsDYiD14gMJ8MpUp2c{position:relative;display:block;height:0;padding:0;overflow:hidden}._2nvHtsDYiD14gMJ8MpUp2c iframe,._2nvHtsDYiD14gMJ8MpUp2c embed,._2nvHtsDYiD14gMJ8MpUp2c object,._2nvHtsDYiD14gMJ8MpUp2c video{position:absolute;top:0;bottom:0;left:0;width:100%;height:100%;border:0}._3h3jXAJ1HmC2_sa49itKME{padding-bottom:56.25%}._3O2q8NHlpyqIZ9AI6RDdW9{padding-bottom:75%}._2lGVVA99VY-snhn6dzPP-z{position:relative}._1N8b-xwgMf2FqoWsby8S_h{position:absolute;background:#96A0AA}._3xIMsspuxuT04IjiU3eVca{top:0;left:0;right:0;width:100%;height:1px}._67lLeHzFQynRtXS_7zffq{left:0;right:0;bottom:0;width:100%;height:1px}._2hOJVv0DfHclqHZV2H7xpr{height:100%;width:1px;top:0;bottom:0;left:0}._15EBvuIyJ249dl_5C-YRhc{height:100%;width:1px;top:0;bottom:0;right:0}
+</style><style>._1UN_ejel6QzQCa_M5Nn4bu{position:relative}._1Hme_I7Z0-UnzNTBsWatHd{background-size:cover;bottom:0;left:0;opacity:1;position:absolute;right:0;top:0;z-index:1}.uknL9MB7UboMnO3bSGXyw{animation:_1WQkeX-jAt8LTereruuSwY 1s forwards}@keyframes _1WQkeX-jAt8LTereruuSwY{0%{opacity:1;z-index:1}99%{opacity:0;z-index:1}100%{opacity:0;z-index:-1}}._1EXftgTMhPAPggRL5V0AY2{bottom:0;left:0;position:absolute;right:0;text-indent:-999em;top:0;z-index:2}
+</style><link rel="stylesheet" type="text/css" href="./Reinforcement Learning with AWS DeepRacer_files/0.e413c.css"><script charset="utf-8" src="./Reinforcement Learning with AWS DeepRacer_files/vendors_routes-courses_routes-nanodegrees_routes-settings.46ef9.js"></script><link rel="stylesheet" type="text/css" href="./Reinforcement Learning with AWS DeepRacer_files/2.acbaa.css"><script charset="utf-8" src="./Reinforcement Learning with AWS DeepRacer_files/vendors_routes-courses_routes-nanodegrees.4ec60.js"></script><link rel="stylesheet" type="text/css" href="./Reinforcement Learning with AWS DeepRacer_files/14.17941.css"><script charset="utf-8" src="./Reinforcement Learning with AWS DeepRacer_files/vendors_routes-nanodegrees.926f9.js"></script><link rel="stylesheet" type="text/css" href="./Reinforcement Learning with AWS DeepRacer_files/1.556dd.css"><script charset="utf-8" src="./Reinforcement Learning with AWS DeepRacer_files/routes-courses_routes-nanodegrees.76873.js"></script><link rel="stylesheet" type="text/css" href="./Reinforcement Learning with AWS DeepRacer_files/8.8116b.css"><script charset="utf-8" src="./Reinforcement Learning with AWS DeepRacer_files/routes-nanodegrees.37520.js"></script><style>.ureact-markdown .hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8;-webkit-text-size-adjust:none}.ureact-markdown .hljs-comment,.ureact-markdown .diff .hljs-header{color:#998;font-style:italic}.ureact-markdown .hljs-keyword,.ureact-markdown .css .rule .hljs-keyword,.ureact-markdown .hljs-winutils,.ureact-markdown .nginx .hljs-title,.ureact-markdown .hljs-subst,.ureact-markdown .hljs-request,.ureact-markdown .hljs-status{color:#333;font-weight:bold}.ureact-markdown .hljs-number,.ureact-markdown .hljs-hexcolor,.ureact-markdown .ruby .hljs-constant{color:teal}.ureact-markdown .hljs-string,.ureact-markdown .hljs-tag .hljs-value,.ureact-markdown .hljs-doctag,.ureact-markdown .tex .hljs-formula{color:#d14}.ureact-markdown .hljs-title,.ureact-markdown .hljs-id,.ureact-markdown .scss .hljs-preprocessor{color:#900;font-weight:bold}.ureact-markdown .hljs-list .hljs-keyword,.ureact-markdown .hljs-subst{font-weight:normal}.ureact-markdown .hljs-class .hljs-title,.ureact-markdown .hljs-type,.ureact-markdown .vhdl .hljs-literal,.ureact-markdown .tex .hljs-command{color:#458;font-weight:bold}.ureact-markdown .hljs-tag,.ureact-markdown .hljs-tag .hljs-title,.ureact-markdown .hljs-rule .hljs-property,.ureact-markdown .django .hljs-tag .hljs-keyword{color:navy;font-weight:normal}.ureact-markdown .hljs-attribute,.ureact-markdown .hljs-variable,.ureact-markdown .lisp .hljs-body,.ureact-markdown .hljs-name{color:teal}.ureact-markdown .hljs-regexp{color:#009926}.ureact-markdown .hljs-symbol,.ureact-markdown .ruby .hljs-symbol .hljs-string,.ureact-markdown .lisp .hljs-keyword,.ureact-markdown .clojure .hljs-keyword,.ureact-markdown .scheme .hljs-keyword,.ureact-markdown .tex .hljs-special,.ureact-markdown .hljs-prompt{color:#990073}.ureact-markdown .hljs-built_in{color:#0086b3}.ureact-markdown .hljs-preprocessor,.ureact-markdown .hljs-pragma,.ureact-markdown .hljs-pi,.ureact-markdown .hljs-doctype,.ureact-markdown .hljs-shebang,.ureact-markdown .hljs-cdata{color:#999;font-weight:bold}.ureact-markdown .hljs-deletion{background:#fdd}.ureact-markdown .hljs-addition{background:#dfd}.ureact-markdown .diff .hljs-change{background:#0086b3}.ureact-markdown .hljs-chunk{color:#aaa}</style><style>._15vzQlp3FJ8f94suLiPCPf{font-size:1rem;line-height:1.7}._15vzQlp3FJ8f94suLiPCPf .katex-display{font-size:1.2em}._15vzQlp3FJ8f94suLiPCPf .katex .mfrac .frac-line{font-size:30px}._15vzQlp3FJ8f94suLiPCPf .katex-mathml{top:0}._15vzQlp3FJ8f94suLiPCPf h1,._15vzQlp3FJ8f94suLiPCPf h2,._15vzQlp3FJ8f94suLiPCPf h3,._15vzQlp3FJ8f94suLiPCPf h4,._15vzQlp3FJ8f94suLiPCPf h5{margin-bottom:5px}._15vzQlp3FJ8f94suLiPCPf h1{font-size:24px;font-weight:600;margin-top:40px}._15vzQlp3FJ8f94suLiPCPf h2{color:#2e3d49;font-size:20px;font-weight:600;margin-top:36px}._15vzQlp3FJ8f94suLiPCPf h3{font-size:18px;font-weight:600;margin-top:28px}._15vzQlp3FJ8f94suLiPCPf h4{font-size:16px;font-weight:600;margin-top:24px}._15vzQlp3FJ8f94suLiPCPf h5{font-size:14px;font-weight:600}._15vzQlp3FJ8f94suLiPCPf img{max-width:100%;max-height:100%}._15vzQlp3FJ8f94suLiPCPf ul,._15vzQlp3FJ8f94suLiPCPf ol{padding-left:40px;margin-bottom:15px}._15vzQlp3FJ8f94suLiPCPf ul{list-style-type:disc}._15vzQlp3FJ8f94suLiPCPf ul>li{list-style-type:disc;line-height:1.7}._15vzQlp3FJ8f94suLiPCPf ol{list-style-type:decimal}._15vzQlp3FJ8f94suLiPCPf ol>li{list-style-type:decimal;line-height:1.7}._15vzQlp3FJ8f94suLiPCPf table{width:auto}._15vzQlp3FJ8f94suLiPCPf table th{text-align:left}._15vzQlp3FJ8f94suLiPCPf table th,._15vzQlp3FJ8f94suLiPCPf table td{padding:8px 16px;background-color:#fff}._15vzQlp3FJ8f94suLiPCPf blockquote{margin:20px 0;padding:10px 20px;border-left:5px solid #f9f9fa}._15vzQlp3FJ8f94suLiPCPf em{font-style:italic}._15vzQlp3FJ8f94suLiPCPf strong{font-weight:bold}._15vzQlp3FJ8f94suLiPCPf li,._15vzQlp3FJ8f94suLiPCPf p{font-size:1rem}._15vzQlp3FJ8f94suLiPCPf p{margin-bottom:15px;line-height:1.7}._15vzQlp3FJ8f94suLiPCPf p:last-child{margin-bottom:0}._15vzQlp3FJ8f94suLiPCPf a:hover{text-decoration:underline}._15vzQlp3FJ8f94suLiPCPf code{background-color:#f7f7f8;border:1px solid #b4b9bd;border-radius:.25rem;color:#0f2b3d;direction:ltr;display:inline-block;padding:0 .25rem;unicode-bidi:bidi-override}._15vzQlp3FJ8f94suLiPCPf pre{background-color:#f7f7f8;border:1px solid #b4b9bd;border-radius:.25rem;color:#96a0aa;display:block;margin:20px 0;overflow:auto;padding:1rem;word-wrap:break-word}._15vzQlp3FJ8f94suLiPCPf pre code{border:none;padding:0;white-space:pre}._31OI8Tmq3yywD_20_EuBtM{background-color:#fff;border-collapse:collapse;max-width:100%;margin-bottom:20px}._31OI8Tmq3yywD_20_EuBtM th,._31OI8Tmq3yywD_20_EuBtM td{line-height:1.42857143;vertical-align:top;border-top:1px solid #ddd}._31OI8Tmq3yywD_20_EuBtM tbody+tbody{border-top:2px solid #ddd}._31OI8Tmq3yywD_20_EuBtM thead th{border-bottom:2px solid #ddd;vertical-align:bottom}._1pZkqGvd1RdMO5JXUl_2oA tbody tr:nth-of-type(odd) td{background-color:#f9f9f9}._1pZkqGvd1RdMO5JXUl_2oA tbody tr:last-child{border-bottom:1px solid #ddd}._3iP2TrDXtmCaMBMDFgM-Os{min-height:.01%;overflow-x:auto}@media screen and (max-width: 767px){._3iP2TrDXtmCaMBMDFgM-Os{margin-bottom:15px;overflow-y:hidden;-ms-overflow-style:-ms-autohiding-scrollbar}._3iP2TrDXtmCaMBMDFgM-Os th,._3iP2TrDXtmCaMBMDFgM-Os td,._3iP2TrDXtmCaMBMDFgM-Os ._31OI8Tmq3yywD_20_EuBtM{white-space:nowrap}._3iP2TrDXtmCaMBMDFgM-Os>._31OI8Tmq3yywD_20_EuBtM{margin-bottom:0}}</style><style>.container--3sWx1{box-shadow:0 0 10px 0 rgba(46,60,73,0.2);border:1px solid #dbe2e8;background-color:#fff}.prompt--1YMnx{border-bottom:1px solid #dbe2e8;padding:40px;line-height:1.8;font-size:18px;color:#2e3d49}.question-number--3IlDk{color:#7d97ad;font-size:14px;margin:0 0 10px 0;text-transform:uppercase}
+</style><style type="text/css">.input-range__slider {
+  appearance: none;
+  background: #3f51b5;
+  border: 1px solid #3f51b5;
+  border-radius: 100%;
+  cursor: pointer;
+  display: block;
+  height: 1rem;
+  margin-left: -0.5rem;
+  margin-top: -0.65rem;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  width: 1rem; }
+  .input-range__slider:active {
+    transform: scale(1.3); }
+  .input-range__slider:focus {
+    box-shadow: 0 0 0 5px rgba(63, 81, 181, 0.2); }
+  .input-range--disabled .input-range__slider {
+    background: #cccccc;
+    border: 1px solid #cccccc;
+    box-shadow: none;
+    transform: none; }
+
+.input-range__slider-container {
+  transition: left 0.3s ease-out; }
+
+.input-range__label {
+  color: #aaaaaa;
+  font-family: "Helvetica Neue", san-serif;
+  font-size: 0.8rem;
+  transform: translateZ(0);
+  white-space: nowrap; }
+
+.input-range__label--min,
+.input-range__label--max {
+  bottom: -1.4rem;
+  position: absolute; }
+
+.input-range__label--min {
+  left: 0; }
+
+.input-range__label--max {
+  right: 0; }
+
+.input-range__label--value {
+  position: absolute;
+  top: -1.8rem; }
+
+.input-range__label-container {
+  left: -50%;
+  position: relative; }
+  .input-range__label--max .input-range__label-container {
+    left: 50%; }
+
+.input-range__track {
+  background: #eeeeee;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  display: block;
+  height: 0.3rem;
+  position: relative;
+  transition: left 0.3s ease-out, width 0.3s ease-out; }
+  .input-range--disabled .input-range__track {
+    background: #eeeeee; }
+
+.input-range__track--background {
+  left: 0;
+  margin-top: -0.15rem;
+  position: absolute;
+  right: 0;
+  top: 50%; }
+
+.input-range__track--active {
+  background: #3f51b5; }
+
+.input-range {
+  height: 1rem;
+  position: relative;
+  width: 100%; }</style><style type="text/css">.rc-tooltip.rc-tooltip-zoom-enter,
+.rc-tooltip.rc-tooltip-zoom-leave {
+  display: block;
+}
+.rc-tooltip-zoom-enter,
+.rc-tooltip-zoom-appear {
+  opacity: 0;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  animation-play-state: paused;
+}
+.rc-tooltip-zoom-leave {
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.6, -0.3, 0.74, 0.05);
+  animation-play-state: paused;
+}
+.rc-tooltip-zoom-enter.rc-tooltip-zoom-enter-active,
+.rc-tooltip-zoom-appear.rc-tooltip-zoom-appear-active {
+  animation-name: rcToolTipZoomIn;
+  animation-play-state: running;
+}
+.rc-tooltip-zoom-leave.rc-tooltip-zoom-leave-active {
+  animation-name: rcToolTipZoomOut;
+  animation-play-state: running;
+}
+@keyframes rcToolTipZoomIn {
+  0% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+  }
+}
+@keyframes rcToolTipZoomOut {
+  0% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+  }
+  100% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(0, 0);
+  }
+}
+.rc-tooltip {
+  position: absolute;
+  z-index: 1070;
+  display: block;
+  visibility: visible;
+  font-size: 12px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+.rc-tooltip-hidden {
+  display: none;
+}
+.rc-tooltip-placement-top,
+.rc-tooltip-placement-topLeft,
+.rc-tooltip-placement-topRight {
+  padding: 5px 0 9px 0;
+}
+.rc-tooltip-placement-right,
+.rc-tooltip-placement-rightTop,
+.rc-tooltip-placement-rightBottom {
+  padding: 0 5px 0 9px;
+}
+.rc-tooltip-placement-bottom,
+.rc-tooltip-placement-bottomLeft,
+.rc-tooltip-placement-bottomRight {
+  padding: 9px 0 5px 0;
+}
+.rc-tooltip-placement-left,
+.rc-tooltip-placement-leftTop,
+.rc-tooltip-placement-leftBottom {
+  padding: 0 9px 0 5px;
+}
+.rc-tooltip-inner {
+  padding: 8px 10px;
+  color: #fff;
+  text-align: left;
+  text-decoration: none;
+  background-color: #373737;
+  border-radius: 6px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.17);
+  min-height: 34px;
+}
+.rc-tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.rc-tooltip-placement-top .rc-tooltip-arrow,
+.rc-tooltip-placement-topLeft .rc-tooltip-arrow,
+.rc-tooltip-placement-topRight .rc-tooltip-arrow {
+  bottom: 4px;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #373737;
+}
+.rc-tooltip-placement-top .rc-tooltip-arrow {
+  left: 50%;
+}
+.rc-tooltip-placement-topLeft .rc-tooltip-arrow {
+  left: 15%;
+}
+.rc-tooltip-placement-topRight .rc-tooltip-arrow {
+  right: 15%;
+}
+.rc-tooltip-placement-right .rc-tooltip-arrow,
+.rc-tooltip-placement-rightTop .rc-tooltip-arrow,
+.rc-tooltip-placement-rightBottom .rc-tooltip-arrow {
+  left: 4px;
+  margin-top: -5px;
+  border-width: 5px 5px 5px 0;
+  border-right-color: #373737;
+}
+.rc-tooltip-placement-right .rc-tooltip-arrow {
+  top: 50%;
+}
+.rc-tooltip-placement-rightTop .rc-tooltip-arrow {
+  top: 15%;
+  margin-top: 0;
+}
+.rc-tooltip-placement-rightBottom .rc-tooltip-arrow {
+  bottom: 15%;
+}
+.rc-tooltip-placement-left .rc-tooltip-arrow,
+.rc-tooltip-placement-leftTop .rc-tooltip-arrow,
+.rc-tooltip-placement-leftBottom .rc-tooltip-arrow {
+  right: 4px;
+  margin-top: -5px;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #373737;
+}
+.rc-tooltip-placement-left .rc-tooltip-arrow {
+  top: 50%;
+}
+.rc-tooltip-placement-leftTop .rc-tooltip-arrow {
+  top: 15%;
+  margin-top: 0;
+}
+.rc-tooltip-placement-leftBottom .rc-tooltip-arrow {
+  bottom: 15%;
+}
+.rc-tooltip-placement-bottom .rc-tooltip-arrow,
+.rc-tooltip-placement-bottomLeft .rc-tooltip-arrow,
+.rc-tooltip-placement-bottomRight .rc-tooltip-arrow {
+  top: 4px;
+  margin-left: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #373737;
+}
+.rc-tooltip-placement-bottom .rc-tooltip-arrow {
+  left: 50%;
+}
+.rc-tooltip-placement-bottomLeft .rc-tooltip-arrow {
+  left: 15%;
+}
+.rc-tooltip-placement-bottomRight .rc-tooltip-arrow {
+  right: 15%;
+}
+</style><style>.answer--P2U4D{display:flex;padding:16px 40px;align-items:center;cursor:pointer}.selector--ctYfN{line-height:16px}.answer-correct--3Mf9Q{}.answer-correct--3Mf9Q:before{border-color:#15c26b}.answer-correct--3Mf9Q .status--3geHI:before{background:url("data:image/svg+xml,%3C?xml version='1.0' encoding='UTF-8' standalone='no'?%3E %3Csvg width='32px' height='32px' viewBox='0 0 32 32' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eicon_right-answer%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs%3E%3C/defs%3E %3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='icon_correct' fill='%2315C26B'%3E %3Cg id='radio-unselected'%3E %3Cpath d='M16,26 C21.5228475,26 26,21.5228475 26,16 C26,10.4771525 21.5228475,6 16,6 C10.4771525,6 6,10.4771525 6,16 C6,21.5228475 10.4771525,26 16,26 L16,26 Z M16,24 C11.581722,24 8,20.418278 8,16 C8,11.581722 11.581722,8 16,8 C20.418278,8 24,11.581722 24,16 C24,20.418278 20.418278,24 16,24 L16,24 Z' id='radio'%3E%3C/path%3E %3Cpath d='M14.8701689,17.5900991 C14.1268407,16.970659 12.6401844,15.7317787 12.6401844,15.7317787 L11.3598156,17.2682213 L14.3598156,19.7682213 C14.7840925,20.1217854 15.4146572,20.0644613 15.7682213,19.6401844 L20.7682213,13.6401844 L19.2317787,12.3598156 L14.8701689,17.5900991 Z' id='Line'%3E%3C/path%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E")}.answer-incorrect--1oYfs{}.answer-incorrect--1oYfs:before{border-color:#f95c3c}.answer-incorrect--1oYfs .status--3geHI:before{background:url("data:image/svg+xml,%3C?xml version='1.0' encoding='UTF-8' standalone='no'?%3E %3Csvg width='32px' height='32px' viewBox='0 0 32 32' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Eicon_wrong-answer%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs%3E %3Cpath d='M17.4142136,16 L20.9497475,12.4644661 L19.5355339,11.0502525 L16,14.5857864 L12.4644661,11.0502525 L11.0502525,12.4644661 L14.5857864,16 L11.0502525,19.5355339 L12.4644661,20.9497475 L16,17.4142136 L19.5355339,20.9497475 L20.9497475,19.5355339 L17.4142136,16 Z' id='path-1'%3E%3C/path%3E %3Cmask id='mask-2' maskContentUnits='userSpaceOnUse' maskUnits='objectBoundingBox' x='0' y='0' width='9.89949494' height='9.89949494' fill='white'%3E %3Cuse xlink:href='%23path-1'%3E%3C/use%3E %3C/mask%3E %3C/defs%3E %3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='icon_wrong-answer'%3E %3Cpath d='M16,26 C21.5228475,26 26,21.5228475 26,16 C26,10.4771525 21.5228475,6 16,6 C10.4771525,6 6,10.4771525 6,16 C6,21.5228475 10.4771525,26 16,26 L16,26 Z M16,24 C11.581722,24 8,20.418278 8,16 C8,11.581722 11.581722,8 16,8 C20.418278,8 24,11.581722 24,16 C24,20.418278 20.418278,24 16,24 L16,24 Z' id='radio' fill='%23F95C3C'%3E%3C/path%3E %3Cuse id='Combined-Shape' stroke='%23F95C3C' mask='url(%23mask-2)' stroke-width='2' fill='%23D8D8D8' xlink:href='%23path-1'%3E%3C/use%3E %3C/g%3E %3C/g%3E %3C/svg%3E")}.answered-label--2HFP8{font-size:14px}.answer-correct--3Mf9Q,.answer-incorrect--1oYfs{line-height:16px}.answer-correct--3Mf9Q,.answer-incorrect--1oYfs{position:relative}.answer-correct--3Mf9Q:before,.answer-incorrect--1oYfs:before{content:'';position:absolute;display:block;top:-1px;left:-1px;right:-1px;bottom:-1px;border-width:1px;border-style:solid}.answer-correct--3Mf9Q .status--3geHI,.answer-incorrect--1oYfs .status--3geHI{position:relative;display:flex;align-items:center;padding-left:32px}.answer-correct--3Mf9Q .status--3geHI:before,.answer-incorrect--1oYfs .status--3geHI:before{content:'';display:block;position:absolute;left:-6px;top:50%;transform:translateY(-50%);width:32px;height:32px;background-size:contain}.answer--P2U4D+.answer--P2U4D{border-top:1px solid #dbe2e8}
+</style><style>.image-atom-content--CDPca{text-align:center}.image-atom-content--CDPca.fullscreen--N9aTh .image-and-annotations-container--1U01s{margin:0 auto;animation-name:fadeIn--uXYE_;animation-duration:0.25s}.image-atom-content--CDPca.fullscreen--N9aTh .caption--2IK-Y{color:#fff;font-size:16px}.image-atom-content--CDPca .image-and-annotations-container--1U01s{position:relative;display:inline-block}.image-atom-content--CDPca .image-and-annotations-container--1U01s img.image--26lOQ{background-color:white;max-width:100%;max-height:100%;display:block}.image-atom-content--CDPca .image-and-annotations-container--1U01s ._image-atom-annotation--1K_LP{box-sizing:border-box}.image-atom-content--CDPca .image-and-annotations-container--1U01s ._image-atom-annotation--1K_LP:before{transition:all 0.15s linear;box-sizing:border-box;content:'';position:absolute;top:0;left:0;border-radius:20px;width:20px;height:20px;margin-left:-10px;margin-top:-10px;background:#02ccba;opacity:0.8;border:4px solid rgba(31,193,163,0.5);background-clip:padding-box}.image-atom-content--CDPca .image-and-annotations-container--1U01s ._image-atom-annotation--1K_LP:hover:before{opacity:1.0;border:3px solid #1fc1a3;background-clip:border-box}.image-atom-content--CDPca .image-and-annotations-container--1U01s ._image-atom-annotation--1K_LP:hover .box--8HpZy{opacity:1}.image-atom-content--CDPca .image-and-annotations-container--1U01s ._image-atom-annotation--1K_LP .box--8HpZy{transition:all 0.15s linear;opacity:0;border:1px solid #02ccba;background:rgba(31,193,163,0.2);width:100%;height:100%}.image-atom-content--CDPca .caption--2IK-Y{text-align:center;font-size:14px;margin-top:5px}.image-atom-content--CDPca .image-and-annotations-container-wide--xzX4Y{width:100%}.image-atom-content--CDPca .image-and-annotations-container-wide--xzX4Y img{min-width:100%}
+</style><link rel="stylesheet" type="text/css" href="./Reinforcement Learning with AWS DeepRacer_files/10.7ab33.css"><script charset="utf-8" src="./Reinforcement Learning with AWS DeepRacer_files/survey-modal.ee2fc.js"></script><script type="text/javascript" charset="utf8" async="" src="./Reinforcement Learning with AWS DeepRacer_files/iframe_api"></script><link type="text/css" rel="stylesheet" charset="UTF-8" href="./Reinforcement Learning with AWS DeepRacer_files/translateelement.css"></head><body cz-shortcut-listen="true" lang="es" dir="ltr"><div id="app"><div id="main"><style type="text/css">
+#intercom-container {
+  display: none;
+}
+</style><div class="content"><div data-test="nanodegree-container"><div><noscript></noscript><div><div class="_layout--large-nav--1elMR"><div class="ureact-app__container"><nav class="ureact-app__nav secondary-only hidden"><a class="nav__a11y-link" href="https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/8b79bd0c-6a77-40bc-8f96-b669c36d6103/concepts/b2bc0827-6d2c-4f9b-a7cc-a64d0e1dbc44#content">Jump to content</a><a class="nav__a11y-link" href="mailto:a11y@udacity.com?subject=Accessibility%20Support" rel="noreferrer" target="_blank">Email for accessibility support</a><div class="nav__contents"><div id="main-layout-sidebar" class="secondary-nav"><div data-test="lesson-sidebar"><div class="_sidebar--sidebar--1jCxg"><h3 class="_sidebar--header--2BaH_"><a href="https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53"><span class="_sidebar--title-content--tLGxZ"><span class="_sidebar--arrow--2Hns-"><i class="vds-icon vds-icon--lg" role="img" aria-label="caret left" aria-hidden="false"><svg viewBox="0 0 32 32"><path d="M20 11.902v8.196a.5.5 0 01-.765.424l-6.557-4.098a.5.5 0 010-.848l6.557-4.098a.5.5 0 01.765.424z"></path></svg></i></span><span class="_sidebar--title--3HHFG text--nowrap-ellipsis--TMdB3"><span>Clase 3:</span><span class="_sidebar--title-text--vcBON text--nowrap-ellipsis--TMdB3"> Machine Learning with AWS</span></span></span></a></h3><div class="_sidebar--sections--2TxEN"><div role="group" aria-expanded="false" class="_section--section--3V1-y shared--section--3e1zX _section--_hide-shadow--1yGng"><a href="https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/8b79bd0c-6a77-40bc-8f96-b669c36d6103/concepts/b2bc0827-6d2c-4f9b-a7cc-a64d0e1dbc44#" class="_section--header--hPsXJ shared--header--3QkFS"><h2>Buscar</h2><i class="vds-icon vds-icon--sm vds-color--silver" role="img" aria-label="Buscar" aria-hidden="false"><svg viewBox="0 0 32 32"><path d="M15 6a9 9 0 017.032 14.617l4.504 4.504a1 1 0 01-1.415 1.415l-4.504-4.504A9 9 0 1115 6zm0 2a7 7 0 100 14 7 7 0 000-14z"></path></svg></i></a></div><div role="group" aria-expanded="false" class="_section--section--3V1-y shared--section--3e1zX _section--_hide-shadow--1yGng"><a href="https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/8b79bd0c-6a77-40bc-8f96-b669c36d6103/concepts/b2bc0827-6d2c-4f9b-a7cc-a64d0e1dbc44#" class="_section--header--hPsXJ shared--header--3QkFS"><h2>Recursos</h2><span class="_section--expand--3Y-E2 shared--expand--239lE"><i class="vds-icon vds-icon--sm" role="img" aria-label="Abierto" aria-hidden="false"><svg viewBox="0 0 32 32"><path d="M11.902 12h8.196a.5.5 0 01.424.765l-4.098 6.557a.5.5 0 01-.848 0l-4.098-6.557a.5.5 0 01.424-.765z"></path></svg></i></span></a></div><div role="group" aria-expanded="true" class="_section--section-selected--24hRk shared--section-expanded--2eoTJ shared--section--3e1zX _section--_hide-shadow--1yGng"><a href="https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/8b79bd0c-6a77-40bc-8f96-b669c36d6103/concepts/b2bc0827-6d2c-4f9b-a7cc-a64d0e1dbc44#" aria-owns="tree-contenido" class="_section--header-expanded--2PtoU shared--header-expanded--290TG shared--header--3QkFS"><h2>Contenido</h2><span class="_section--collapse--3crCv shared--collapse--2w1x2"><i class="vds-icon vds-icon--sm" role="img" aria-label="Cerrar" aria-hidden="false"><svg viewBox="0 0 32 32"><path d="M11.902 12h8.196a.5.5 0 01.424.765l-4.098 6.557a.5.5 0 01-.848 0l-4.098-6.557a.5.5 0 01.424-.765z"></path></svg></i></span></a><div id="tree-contenido" class="_section--section-contents--7aocp"><ol class="index--contents-list--33vHB"><li id="contents-list-scroll-target-f5654891-eb15-4bcc-ac94-aaf812d0ac7d" class="_item--item--dTIux"><a title="1. Machine Learning with AWS" href="https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/8b79bd0c-6a77-40bc-8f96-b669c36d6103/concepts/f5654891-eb15-4bcc-ac94-aaf812d0ac7d"><span class="_item--waypoint-check--nmzcM"><i class="vds-icon vds-icon--sm" role="img" aria-label="check" aria-hidden="false"><svg viewBox="0 0 33 32"><path d="M17 7a1 1 0 01.117 1.993L17 9h-7v14h14v-7l.007-.117a1 1 0 01.876-.876L25 15a1 1 0 01.993.883L26 16v7a2 2 0 01-2 2H10a2 2 0 01-2-2V9a2 2 0 012-2h7zm8.555.168a1 1 0 01.277 1.387l-8 10a1 1 0 01-1.54.152l-3-3a1 1 0 011.415-1.414l2.138 2.137 7.323-8.985a1 1 0 011.387-.277z"></path></svg></i></span> 1. Machine Learning with AWS</a></li><li id="contents-list-scroll-target-d83b6e5b-d00c-453a-8c81-491821506711" class="_item--item--dTIux"><a title="2. Lesson Overview" href="https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/8b79bd0c-6a77-40bc-8f96-b669c36d6103/concepts/d83b6e5b-d00c-453a-8c81-491821506711"><span class="_item--waypoint-check--nmzcM"><i class="vds-icon vds-icon--sm" role="img" aria-label="check" aria-hidden="false"><svg viewBox="0 0 33 32"><path d="M17 7a1 1 0 01.117 1.993L17 9h-7v14h14v-7l.007-.117a1 1 0 01.876-.876L25 15a1 1 0 01.993.883L26 16v7a2 2 0 01-2 2H10a2 2 0 01-2-2V9a2 2 0 012-2h7zm8.555.168a1 1 0 01.277 1.387l-8 10a1 1 0 01-1.54.152l-3-3a1 1 0 011.415-1.414l2.138 2.137 7.323-8.985a1 1 0 011.387-.277z"></path></svg></i></span> 2. Lesson Overview</a></li><li id="contents-list-scroll-target-2e2fcd70-fd26-45aa-9745-5fe947e8a3d9" class="_item--item--dTIux"><a title="3. AWS Account Requirements" href="https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/8b79bd0c-6a77-40bc-8f96-b669c36d6103/concepts/2e2fcd70-fd26-45aa-9745-5fe947e8a3d9"><span class="_item--waypoint-check--nmzcM"><i class="vds-icon vds-icon--sm" role="img" aria-label="check" aria-hidden="false"><svg viewBox="0 0 33 32"><path d="M17 7a1 1 0 01.117 1.993L17 9h-7v14h14v-7l.007-.117a1 1 0 01.876-.876L25 15a1 1 0 01.993.883L26 16v7a2 2 0 01-2 2H10a2 2 0 01-2-2V9a2 2 0 012-2h7zm8.555.168a1 1 0 01.277 1.387l-8 10a1 1 0 01-1.54.152l-3-3a1 1 0 011.415-1.414l2.138 2.137 7.323-8.985a1 1 0 011.387-.277z"></path></svg></i></span> 3. AWS Account Requirements</a></li><li id="contents-list-scroll-target-2ab3c248-a827-42dd-8e49-5bef1d450991" class="_item--item--dTIux"><a title="4. Computer Vision and Its Applications" href="https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/8b79bd0c-6a77-40bc-8f96-b669c36d6103/concepts/2ab3c248-a827-42dd-8e49-5bef1d450991"><span class="_item--waypoint-check--nmzcM"><i class="vds-icon vds-icon--sm" role="img" aria-label="check" aria-hidden="false"><svg viewBox="0 0 33 32"><path d="M17 7a1 1 0 01.117 1.993L17 9h-7v14h14v-7l.007-.117a1 1 0 01.876-.876L25 15a1 1 0 01.993.883L26 16v7a2 2 0 01-2 2H10a2 2 0 01-2-2V9a2 2 0 012-2h7zm8.555.168a1 1 0 01.277 1.387l-8 10a1 1 0 01-1.54.152l-3-3a1 1 0 011.415-1.414l2.138 2.137 7.323-8.985a1 1 0 011.387-.277z"></path></svg></i></span> 4. Computer Vision and Its Applications</a></li><li id="contents-list-scroll-target-4662c7de-d24b-4ab4-a1e1-eecfaf40852d" class="_item--item--dTIux"><a title="5. Computer Vision with AWS DeepLens" href="https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/8b79bd0c-6a77-40bc-8f96-b669c36d6103/concepts/4662c7de-d24b-4ab4-a1e1-eecfaf40852d"><span class="_item--waypoint-check--nmzcM"><i class="vds-icon vds-icon--sm" role="img" aria-label="check" aria-hidden="false"><svg viewBox="0 0 33 32"><path d="M17 7a1 1 0 01.117 1.993L17 9h-7v14h14v-7l.007-.117a1 1 0 01.876-.876L25 15a1 1 0 01.993.883L26 16v7a2 2 0 01-2 2H10a2 2 0 01-2-2V9a2 2 0 012-2h7zm8.555.168a1 1 0 01.277 1.387l-8 10a1 1 0 01-1.54.152l-3-3a1 1 0 011.415-1.414l2.138 2.137 7.323-8.985a1 1 0 011.387-.277z"></path></svg></i></span> 5. Computer Vision with AWS DeepLens</a></li><li id="contents-list-scroll-target-50185845-e148-42e0-a709-bff908026ed2" class="_item--item--dTIux"><a title="6. A Sample Project with AWS DeepLens" href="https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/8b79bd0c-6a77-40bc-8f96-b669c36d6103/concepts/50185845-e148-42e0-a709-bff908026ed2"><span class="_item--waypoint-check--nmzcM"><i class="vds-icon vds-icon--sm" role="img" aria-label="check" aria-hidden="false"><svg viewBox="0 0 33 32"><path d="M17 7a1 1 0 01.117 1.993L17 9h-7v14h14v-7l.007-.117a1 1 0 01.876-.876L25 15a1 1 0 01.993.883L26 16v7a2 2 0 01-2 2H10a2 2 0 01-2-2V9a2 2 0 012-2h7zm8.555.168a1 1 0 01.277 1.387l-8 10a1 1 0 01-1.54.152l-3-3a1 1 0 011.415-1.414l2.138 2.137 7.323-8.985a1 1 0 011.387-.277z"></path></svg></i></span> 6. A Sample Project with AWS DeepLens</a></li><li id="contents-list-scroll-target-f0a69fa4-a869-454d-860c-3aa8384448c7" class="_item--item--dTIux"><a title="7. Quiz: Computer Vision" href="https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/8b79bd0c-6a77-40bc-8f96-b669c36d6103/concepts/f0a69fa4-a869-454d-860c-3aa8384448c7"><span class="_item--waypoint-check--nmzcM"><i class="vds-icon vds-icon--sm" role="img" aria-label="check" aria-hidden="false"><svg viewBox="0 0 33 32"><path d="M17 7a1 1 0 01.117 1.993L17 9h-7v14h14v-7l.007-.117a1 1 0 01.876-.876L25 15a1 1 0 01.993.883L26 16v7a2 2 0 01-2 2H10a2 2 0 01-2-2V9a2 2 0 012-2h7zm8.555.168a1 1 0 01.277 1.387l-8 10a1 1 0 01-1.54.152l-3-3a1 1 0 011.415-1.414l2.138 2.137 7.323-8.985a1 1 0 011.387-.277z"></path></svg></i></span> 7. Quiz: Computer Vision</a></li><li id="contents-list-scroll-target-577cf27c-7544-431d-a10a-8265641f8d89" class="_item--item--dTIux"><a title="8. Reinforcement Learning and Its Applications" href="https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/8b79bd0c-6a77-40bc-8f96-b669c36d6103/concepts/577cf27c-7544-431d-a10a-8265641f8d89"><span class="_item--waypoint-check--nmzcM"><i class="vds-icon vds-icon--sm" role="img" aria-label="check" aria-hidden="false"><svg viewBox="0 0 33 32"><path d="M17 7a1 1 0 01.117 1.993L17 9h-7v14h14v-7l.007-.117a1 1 0 01.876-.876L25 15a1 1 0 01.993.883L26 16v7a2 2 0 01-2 2H10a2 2 0 01-2-2V9a2 2 0 012-2h7zm8.555.168a1 1 0 01.277 1.387l-8 10a1 1 0 01-1.54.152l-3-3a1 1 0 011.415-1.414l2.138 2.137 7.323-8.985a1 1 0 011.387-.277z"></path></svg></i></span> 8. Reinforcement Learning and Its Applications</a></li><li id="contents-list-scroll-target-b2bc0827-6d2c-4f9b-a7cc-a64d0e1dbc44" class="_item--item-selected--3LMMf"><a title="9. Reinforcement Learning with AWS DeepRacer" href="https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/8b79bd0c-6a77-40bc-8f96-b669c36d6103/concepts/b2bc0827-6d2c-4f9b-a7cc-a64d0e1dbc44"><span class="_item--waypoint-check--nmzcM"><i class="vds-icon vds-icon--sm" role="img" aria-label="check" aria-hidden="false"><svg viewBox="0 0 33 32"><path d="M17 7a1 1 0 01.117 1.993L17 9h-7v14h14v-7l.007-.117a1 1 0 01.876-.876L25 15a1 1 0 01.993.883L26 16v7a2 2 0 01-2 2H10a2 2 0 01-2-2V9a2 2 0 012-2h7zm8.555.168a1 1 0 01.277 1.387l-8 10a1 1 0 01-1.54.152l-3-3a1 1 0 011.415-1.414l2.138 2.137 7.323-8.985a1 1 0 011.387-.277z"></path></svg></i></span> 9. Reinforcement Learning with AWS DeepRacer</a></li><li id="contents-list-scroll-target-b06ec77b-b18d-4df1-8d69-8864fd13a643" class="_item--item--dTIux"><a title="10. Demo: Reinforcement Learning with AWS DeepRacer" href="https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/8b79bd0c-6a77-40bc-8f96-b669c36d6103/concepts/b06ec77b-b18d-4df1-8d69-8864fd13a643"><span class="_item--waypoint-circle--3-qL8"><i class="vds-icon vds-icon--sm" role="img" aria-label="circle full" aria-hidden="false"><svg viewBox="0 0 32 32"><path d="M16 26c-5.523 0-10-4.477-10-10S10.477 6 16 6s10 4.477 10 10-4.477 10-10 10z"></path></svg></i></span> 10. Demo: Reinforcement Learning with AWS DeepRacer</a></li><li id="contents-list-scroll-target-f80b98e3-71ab-4aec-93e6-93679881de76" class="_item--item--dTIux"><a title="11. Quiz: Reinforcement Learning" href="https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/8b79bd0c-6a77-40bc-8f96-b669c36d6103/concepts/f80b98e3-71ab-4aec-93e6-93679881de76"><span class="_item--waypoint-circle--3-qL8"><i class="vds-icon vds-icon--sm" role="img" aria-label="circle full" aria-hidden="false"><svg viewBox="0 0 32 32"><path d="M16 26c-5.523 0-10-4.477-10-10S10.477 6 16 6s10 4.477 10 10-4.477 10-10 10z"></path></svg></i></span> 11. Quiz: Reinforcement Learning</a></li><li id="contents-list-scroll-target-f34778b5-840a-4157-90e6-4a04c04fb8b0" class="_item--item--dTIux"><a title="12. AWS DeepRacer Reinforcement Learning Exercise" href="https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/8b79bd0c-6a77-40bc-8f96-b669c36d6103/concepts/f34778b5-840a-4157-90e6-4a04c04fb8b0"><span class="_item--waypoint-circle--3-qL8"><i class="vds-icon vds-icon--sm" role="img" aria-label="circle full" aria-hidden="false"><svg viewBox="0 0 32 32"><path d="M16 26c-5.523 0-10-4.477-10-10S10.477 6 16 6s10 4.477 10 10-4.477 10-10 10z"></path></svg></i></span> 12. AWS DeepRacer Reinforcement Learning Exercise</a></li><li id="contents-list-scroll-target-eaf959d3-c7f9-4b93-8d9d-627b0f4018c8" class="_item--item--dTIux"><a title="13. Exercise Solution: AWS DeepRacer" href="https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/8b79bd0c-6a77-40bc-8f96-b669c36d6103/concepts/eaf959d3-c7f9-4b93-8d9d-627b0f4018c8"><span class="_item--waypoint-circle--3-qL8"><i class="vds-icon vds-icon--sm" role="img" aria-label="circle full" aria-hidden="false"><svg viewBox="0 0 32 32"><path d="M16 26c-5.523 0-10-4.477-10-10S10.477 6 16 6s10 4.477 10 10-4.477 10-10 10z"></path></svg></i></span> 13. Exercise Solution: AWS DeepRacer</a></li><li id="contents-list-scroll-target-b3dad091-4e11-4ccb-a9f2-76a2ae8125ee" class="_item--item--dTIux"><a title="14. Introduction to Generative AI " href="https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/8b79bd0c-6a77-40bc-8f96-b669c36d6103/concepts/b3dad091-4e11-4ccb-a9f2-76a2ae8125ee"><span class="_item--waypoint-circle--3-qL8"><i class="vds-icon vds-icon--sm" role="img" aria-label="circle full" aria-hidden="false"><svg viewBox="0 0 32 32"><path d="M16 26c-5.523 0-10-4.477-10-10S10.477 6 16 6s10 4.477 10 10-4.477 10-10 10z"></path></svg></i></span> 14. Introduction to Generative AI </a></li><li id="contents-list-scroll-target-30529556-0ec9-4fe8-98c1-6fd1f470bcbd" class="_item--item--dTIux"><a title="15. Generative AI with AWS DeepComposer" href="https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/8b79bd0c-6a77-40bc-8f96-b669c36d6103/concepts/30529556-0ec9-4fe8-98c1-6fd1f470bcbd"><span class="_item--waypoint-check--nmzcM"><i class="vds-icon vds-icon--sm" role="img" aria-label="check" aria-hidden="false"><svg viewBox="0 0 33 32"><path d="M17 7a1 1 0 01.117 1.993L17 9h-7v14h14v-7l.007-.117a1 1 0 01.876-.876L25 15a1 1 0 01.993.883L26 16v7a2 2 0 01-2 2H10a2 2 0 01-2-2V9a2 2 0 012-2h7zm8.555.168a1 1 0 01.277 1.387l-8 10a1 1 0 01-1.54.152l-3-3a1 1 0 011.415-1.414l2.138 2.137 7.323-8.985a1 1 0 011.387-.277z"></path></svg></i></span> 15. Generative AI with AWS DeepComposer</a></li><li id="contents-list-scroll-target-2a590903-3b83-4e4c-a462-d13705bfbb23" class="_item--item--dTIux"><a title="16. GANs with AWS DeepComposer" href="https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/8b79bd0c-6a77-40bc-8f96-b669c36d6103/concepts/2a590903-3b83-4e4c-a462-d13705bfbb23"><span class="_item--waypoint-circle--3-qL8"><i class="vds-icon vds-icon--sm" role="img" aria-label="circle full" aria-hidden="false"><svg viewBox="0 0 32 32"><path d="M16 26c-5.523 0-10-4.477-10-10S10.477 6 16 6s10 4.477 10 10-4.477 10-10 10z"></path></svg></i></span> 16. GANs with AWS DeepComposer</a></li><li id="contents-list-scroll-target-2df4beca-0702-46fb-b575-89ac03bbdcb2" class="_item--item--dTIux"><a title="17. AR-CNN with AWS DeepComposer" href="https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/8b79bd0c-6a77-40bc-8f96-b669c36d6103/concepts/2df4beca-0702-46fb-b575-89ac03bbdcb2"><span class="_item--waypoint-circle--3-qL8"><i class="vds-icon vds-icon--sm" role="img" aria-label="circle full" aria-hidden="false"><svg viewBox="0 0 32 32"><path d="M16 26c-5.523 0-10-4.477-10-10S10.477 6 16 6s10 4.477 10 10-4.477 10-10 10z"></path></svg></i></span> 17. AR-CNN with AWS DeepComposer</a></li><li id="contents-list-scroll-target-cf390146-fbf5-4ef7-9430-6577eb31a07f" class="_item--item--dTIux"><a title="18. Quiz: Generative AI" href="https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/8b79bd0c-6a77-40bc-8f96-b669c36d6103/concepts/cf390146-fbf5-4ef7-9430-6577eb31a07f"><span class="_item--waypoint-circle--3-qL8"><i class="vds-icon vds-icon--sm" role="img" aria-label="circle full" aria-hidden="false"><svg viewBox="0 0 32 32"><path d="M16 26c-5.523 0-10-4.477-10-10S10.477 6 16 6s10 4.477 10 10-4.477 10-10 10z"></path></svg></i></span> 18. Quiz: Generative AI</a></li><li id="contents-list-scroll-target-cc8edb89-63d7-4882-a3e4-f815977e762e" class="_item--item--dTIux"><a title="19. Demo: Create Music with AWS DeepComposer" href="https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/8b79bd0c-6a77-40bc-8f96-b669c36d6103/concepts/cc8edb89-63d7-4882-a3e4-f815977e762e"><span class="_item--waypoint-check--nmzcM"><i class="vds-icon vds-icon--sm" role="img" aria-label="check" aria-hidden="false"><svg viewBox="0 0 33 32"><path d="M17 7a1 1 0 01.117 1.993L17 9h-7v14h14v-7l.007-.117a1 1 0 01.876-.876L25 15a1 1 0 01.993.883L26 16v7a2 2 0 01-2 2H10a2 2 0 01-2-2V9a2 2 0 012-2h7zm8.555.168a1 1 0 01.277 1.387l-8 10a1 1 0 01-1.54.152l-3-3a1 1 0 011.415-1.414l2.138 2.137 7.323-8.985a1 1 0 011.387-.277z"></path></svg></i></span> 19. Demo: Create Music with AWS DeepComposer</a></li><li id="contents-list-scroll-target-bb3e5e34-5c9e-49bd-bafd-ad9ae03505f9" class="_item--item--dTIux"><a title="20. Exercise: Generate Music with AWS DeepComposer" href="https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/8b79bd0c-6a77-40bc-8f96-b669c36d6103/concepts/bb3e5e34-5c9e-49bd-bafd-ad9ae03505f9"><span class="_item--waypoint-circle--3-qL8"><i class="vds-icon vds-icon--sm" role="img" aria-label="circle full" aria-hidden="false"><svg viewBox="0 0 32 32"><path d="M16 26c-5.523 0-10-4.477-10-10S10.477 6 16 6s10 4.477 10 10-4.477 10-10 10z"></path></svg></i></span> 20. Exercise: Generate Music with AWS DeepComposer</a></li><li id="contents-list-scroll-target-7c190375-e3d7-421d-8b7b-ec71a843d526" class="_item--item--dTIux"><a title="21. Build a Custom GAN Part 1: Notebooks and Data Preparation (Optional)" href="https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/8b79bd0c-6a77-40bc-8f96-b669c36d6103/concepts/7c190375-e3d7-421d-8b7b-ec71a843d526"><span class="_item--waypoint-circle--3-qL8"><i class="vds-icon vds-icon--sm" role="img" aria-label="circle full" aria-hidden="false"><svg viewBox="0 0 32 32"><path d="M16 26c-5.523 0-10-4.477-10-10S10.477 6 16 6s10 4.477 10 10-4.477 10-10 10z"></path></svg></i></span> 21. Build a Custom GAN Part 1: Notebooks and Data Preparation (Optional)</a></li><li id="contents-list-scroll-target-b2f60b0a-6900-4b7a-8782-3db466f857c0" class="_item--item--dTIux"><a title="22. Build a Custom GAN Part 2: Training and Evaluation (Optional)" href="https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/8b79bd0c-6a77-40bc-8f96-b669c36d6103/concepts/b2f60b0a-6900-4b7a-8782-3db466f857c0"><span class="_item--waypoint-circle--3-qL8"><i class="vds-icon vds-icon--sm" role="img" aria-label="circle full" aria-hidden="false"><svg viewBox="0 0 32 32"><path d="M16 26c-5.523 0-10-4.477-10-10S10.477 6 16 6s10 4.477 10 10-4.477 10-10 10z"></path></svg></i></span> 22. Build a Custom GAN Part 2: Training and Evaluation (Optional)</a></li><li id="contents-list-scroll-target-549bf11d-ec86-4399-8147-98eb89479345" class="_item--item--dTIux"><a title="23. Lesson Review" href="https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/8b79bd0c-6a77-40bc-8f96-b669c36d6103/concepts/549bf11d-ec86-4399-8147-98eb89479345"><span class="_item--waypoint-circle--3-qL8"><i class="vds-icon vds-icon--sm" role="img" aria-label="circle full" aria-hidden="false"><svg viewBox="0 0 32 32"><path d="M16 26c-5.523 0-10-4.477-10-10S10.477 6 16 6s10 4.477 10 10-4.477 10-10 10z"></path></svg></i></span> 23. Lesson Review</a></li><li id="contents-list-scroll-target-7d494e22-7a0f-4964-b0cd-95107937c533" class="_item--item--dTIux"><a title="24. Glossary" href="https://classroom.udacity.com/nanodegrees/nd065/parts/a5a4c41f-9cc7-48bd-9f00-582f35a7da53/modules/885b116b-2ca3-453a-8df1-4ea4b436b5da/lessons/8b79bd0c-6a77-40bc-8f96-b669c36d6103/concepts/7d494e22-7a0f-4964-b0cd-95107937c533"><span class="_item--waypoint-circle--3-qL8"><i class="vds-icon vds-icon--sm" role="img" aria-label="circle full" aria-hidden="false"><svg viewBox="0 0 32 32"><path d="M16 26c-5.523 0-10-4.477-10-10S10.477 6 16 6s10 4.477 10 10-4.477 10-10 10z"></path></svg></i></span> 24. Glossary</a></li></ol></div></div></div><div class="_sidebar--footer--2i1oy"><ul class="_service-links--service-links--25Cft"><li><a role="link" tabindex="0" class="_service-links--service-link-item--1qvdY"><span class="_service-links--glyph-wrapper--2tXod"><i class="vds-icon vds-color--cerulean" role="img" aria-label="lightbulb" aria-hidden="false"><svg viewBox="0 0 32 32"><path d="M16 4a9 9 0 014 17.064V25a2 2 0 01-2 2l-.268.001a2 2 0 01-3.464 0L14 27a2 2 0 01-2-2v-3.936A9 9 0 0116 4zm2 20h-4v1h4v-1zm0-3h-4v1h4v-1zM16 6a7 7 0 00-3.607 13.001h7.214A7 7 0 0016 6zm0 2a1 1 0 010 2 3 3 0 00-3 3 1 1 0 01-2 0 5 5 0 015-5z"></path></svg></i></span><div class="_service-links--service-header--10iDA"><span class="_service-links--service-title--2KAOW">Mentor Help</span></div><span class="_service-links--service-description--2JMqH">Ask a mentor on our Q&amp;A platform</span></a></li><li><div class="index--studenthub-link-wrapper--3rL8o"><a role="link" tabindex="0" class="index--service-link-item--1Wfk-"><span class="index--glyph-wrapper--1SjGA index--studenthub-btn--2jSGs lesson"><i class="vds-icon vds-color--purple" role="img" aria-label="student hub" aria-hidden="false"><svg viewBox="0 0 32 32"><path d="M25 6a3 3 0 013 3v6a3 3 0 01-3 3h-2v3.397a3 3 0 01-2.823 2.995l-.176.005H9.82l-4.324 2.471a1 1 0 01-1.486-1.01l.99-6.93v-5.531a3 3 0 013-3L12 10.396V9a3 3 0 013-3h10zm-5 6.397H8a1 1 0 00-1 1V19l-.01.141-.71 4.976 2.78-1.588a1 1 0 01.496-.132h10.445a1 1 0 001-1v-8a1 1 0 00-1-1zM25 8H15a1 1 0 00-1 1v1.396h6a3 3 0 012.996 2.825l.005.176L23 16h2a1 1 0 001-1V9a1 1 0 00-1-1z"></path></svg></i></span><div class="index--service-title-container--3Em56"><span class="index--service-title--3qRug">Peer Chat</span></div><span class="index--service-description--190Zi">Chat with peers and alumni</span></a></div></li></ul></div></div></div></div></div></nav><main class="ureact-app__main"><div class="title-area"><div class="ureact-app__header"><div><div data-test="concept-header"><nav aria-label="inner-nav" class="index--dark-header--2SHyn index--_header--36qYf"><div class="vds-flex vds-flex--align-center vds-flex--full vds-flex--justify-between vds-flex--spacing-2x"><div class="vds-flex__item"><div class="hamburger--hamburger--1oS_7 index--hamburger--31PjM"><button class="vds-round-button vds-round-button--minimal-inverse vds-round-button--icon" type="button"><span class="vds-round-button__content"><i class="vds-icon vds-color--cerulean" role="img" aria-label="Toggle Sidebar" aria-hidden="false"><svg viewBox="0 0 33 32"><path d="M24 21a1 1 0 010 2H8a1 1 0 010-2h16zm0-6a1 1 0 010 2H8a1 1 0 010-2h16zm0-6a1 1 0 010 2H8a1 1 0 010-2h16z"></path></svg></i><span class="vds-visually-hidden"></span></span></button></div></div><div class="vds-flex__item"><h1 id="header-title" aria-live="assertive">Reinforcement Learning with AWS DeepRacer</h1></div><div class="vds-flex__item"><div class="_header--right-node--tOqX9"><div><span class="index--from-tablet--cciH6"><button class="vds-button vds-button--minimal-inverse vds-button--small" type="button"><span class="vds-button__content">Send Feedback</span></button></span><span class="index--until-tablet--3TJ_9"><button class="vds-round-button vds-round-button--minimal-inverse vds-round-button--icon" type="button"><span class="vds-round-button__content"><i class="vds-icon vds-color--cerulean" role="img" aria-label="email" aria-hidden="false"><svg viewBox="0 0 32 32"><path d="M24.007 9C25.108 9 26 9.904 26 11.002v9.996C26 22.1 25.11 23 24.007 23H7.993A2.002 2.002 0 016 20.998v-9.996C6 9.9 6.89 9 7.993 9h16.014zM7.999 11.747L8 20.997 24.001 21 24 11.39l-4.195 4.007 1.902 1.896a1 1 0 01.083 1.32l-.083.094a1 1 0 01-1.32.083l-.094-.083-2.1-2.102L16.6 17.8a1 1 0 01-1.09.072l-.11-.072-1.6-1.2-.044.055-.049.052-2 2a1 1 0 01-1.497-1.32l.083-.094 1.898-1.9-4.192-3.646zM16 16l7-4.998L9 11l7 5z"></path></svg></i><span class="vds-visually-hidden"></span></span></button></span></div></div></div></div></nav></div></div></div></div><div class="content-area" style="background-color: rgb(250, 251, 252);"><div aria-hidden="true" class="hidden-header"><div class="ureact-app__header"><div><div data-test="concept-header"><nav aria-label="inner-nav" class="index--dark-header--2SHyn index--_header--36qYf"><div class="vds-flex vds-flex--align-center vds-flex--full vds-flex--justify-between vds-flex--spacing-2x"><div class="vds-flex__item"><div class="hamburger--hamburger--1oS_7 index--hamburger--31PjM"><button class="vds-round-button vds-round-button--minimal-inverse vds-round-button--icon" type="button"><span class="vds-round-button__content"><i class="vds-icon vds-color--cerulean" role="img" aria-label="Toggle Sidebar" aria-hidden="false"><svg viewBox="0 0 33 32"><path d="M24 21a1 1 0 010 2H8a1 1 0 010-2h16zm0-6a1 1 0 010 2H8a1 1 0 010-2h16zm0-6a1 1 0 010 2H8a1 1 0 010-2h16z"></path></svg></i><span class="vds-visually-hidden"></span></span></button></div></div><div class="vds-flex__item"><h1 id="header-title" aria-live="assertive">Reinforcement Learning with AWS DeepRacer</h1></div><div class="vds-flex__item"><div class="_header--right-node--tOqX9"><div><span class="index--from-tablet--cciH6"><button class="vds-button vds-button--minimal-inverse vds-button--small" type="button"><span class="vds-button__content">Send Feedback</span></button></span><span class="index--until-tablet--3TJ_9"><button class="vds-round-button vds-round-button--minimal-inverse vds-round-button--icon" type="button"><span class="vds-round-button__content"><i class="vds-icon vds-color--cerulean" role="img" aria-label="email" aria-hidden="false"><svg viewBox="0 0 32 32"><path d="M24.007 9C25.108 9 26 9.904 26 11.002v9.996C26 22.1 25.11 23 24.007 23H7.993A2.002 2.002 0 016 20.998v-9.996C6 9.9 6.89 9 7.993 9h16.014zM7.999 11.747L8 20.997 24.001 21 24 11.39l-4.195 4.007 1.902 1.896a1 1 0 01.083 1.32l-.083.094a1 1 0 01-1.32.083l-.094-.083-2.1-2.102L16.6 17.8a1 1 0 01-1.09.072l-.11-.072-1.6-1.2-.044.055-.049.052-2 2a1 1 0 01-1.497-1.32l.083-.094 1.898-1.9-4.192-3.646zM16 16l7-4.998L9 11l7 5z"></path></svg></i><span class="vds-visually-hidden"></span></span></button></span></div></div></div></div></nav></div></div></div></div><div id="content" class="ureact-app__body"><div data-test="concept-main" class="_main--main--3mpPA"><div class="_main--content-container--ILkoI"><div><div class="index--container--2OwOl"><div class="index--atom--lmAIo layout--content--3Smmq"><div class="ltr"><div class="index-module--markdown--2MdcR ureact-markdown "><h1 id="reinforcement-learning-with-aws-deepracer">Reinforcement Learning with AWS DeepRacer</h1>
+</div></div><span></span></div></div></div><div><div class="index--container--2OwOl"><div class="index--atom--lmAIo layout--content--3Smmq"><div class="ltr"><div class="index-module--markdown--2MdcR ureact-markdown "><h2 id="reinforcement-learning-concepts">Reinforcement Learning Concepts</h2>
+<p>In this section, we’ll learn some basic reinforcement learning terms and concepts using AWS DeepRacer as an example.</p>
+</div></div><span></span></div></div></div><div><div class="index--container--2OwOl"><div class="index--atom--lmAIo layout--content--3Smmq"><div><div class="video-atom--video--1rflY" style="width: 100%;"><div class="vds-loading vds-loading--md" role="status" aria-label="Loading…"><div class="vds-loading__children"><div class="_1UN_ejel6QzQCa_M5Nn4bu"><div class="_2lGVVA99VY-snhn6dzPP-z"><div class="_3h3jXAJ1HmC2_sa49itKME _2nvHtsDYiD14gMJ8MpUp2c"><div class=""><iframe frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="640" height="360" src="./Reinforcement Learning with AWS DeepRacer_files/li-lJe3QWds.html" id="widget20"></iframe></div></div></div></div></div></div></div></div><span></span></div></div></div><div><div class="index--container--2OwOl"><div class="index--atom--lmAIo layout--content--3Smmq"><div class="ltr"><div class="index-module--markdown--2MdcR ureact-markdown "><h2 id="summary">Summary</h2>
+<p>This section introduces six basic reinforcement learning terms and provides an example for each in the context of AWS DeepRacer.</p>
+</div></div><span></span></div></div></div><div><div class="index--container--2OwOl"><div class="index--atom--lmAIo layout--content--3Smmq"><div><div role="button" tabindex="0" aria-label="Show Image Fullscreen" class="image-atom--image-atom--1XDdu"><div class="image-atom-content--CDPca"><div class="image-and-annotations-container--1U01s"><img class="image--26lOQ" src="./Reinforcement Learning with AWS DeepRacer_files/l3-ml-with-aws-rl-terms.png" alt="Image contains icons representing the basic RL terms: Agent, Environment, State, Action, Reward, and Episode." width="600px"></div><div class="caption--2IK-Y"><div class="index-module--markdown--2MdcR ureact-markdown "><p>Basic RL terms: Agent, environment, state, action, reward, and episode</p>
+</div></div></div></div></div><span></span></div></div></div><div><div class="index--container--2OwOl"><div class="index--atom--lmAIo layout--content--3Smmq"><div class="ltr"><div class="index-module--markdown--2MdcR ureact-markdown "><p><strong>Agent</strong></p>
+<ul>
+<li>The piece of software you are training is called an agent.</li>
+<li>It makes decisions in an environment to reach a goal. </li>
+<li>In AWS DeepRacer, the agent is the AWS DeepRacer car and its goal is to finish * laps around the track as fast as it can while, in some cases, avoiding obstacles. </li>
+</ul>
+<p><strong>Environment</strong></p>
+<ul>
+<li>The environment is the surrounding area within which our agent interacts. </li>
+<li>For AWS DeepRacer, this is a track in our simulator or in real life.</li>
+</ul>
+<p><strong>State </strong></p>
+<ul>
+<li>The state is defined by the current position within the environment that is visible, or known, to an agent. </li>
+<li>In AWS DeepRacer’s case, each state is an image captured by its camera.</li>
+<li>The car’s initial state is the starting line of the track and its terminal state is when the car finishes a lap, bumps into an obstacle, or drives off the track.</li>
+</ul>
+<p><strong>Action</strong></p>
+<ul>
+<li>For every state, an agent needs to take an action toward achieving its goal.</li>
+<li>An AWS DeepRacer car approaching a turn can choose to accelerate or brake and turn left, right, or go straight. </li>
+</ul>
+<p><strong>Reward</strong></p>
+<ul>
+<li>Feedback is given to an agent for each action it takes in a given state.</li>
+<li>This feedback is a numerical reward.</li>
+<li>A reward function is an incentive plan that assigns scores as rewards to different zones on the track. </li>
+</ul>
+<p><strong>Episode</strong></p>
+<ul>
+<li>An episode represents a period of trial and error when an agent makes decisions and gets feedback from its environment. </li>
+<li>For AWS DeepRacer, an episode begins at the initial state, when the car leaves the starting position, and ends at the terminal state, when it finishes a lap, bumps into an obstacle, or drives off the track. </li>
+</ul>
+<p>In a reinforcement learning model, an <strong>agent</strong> learns in an interactive real-time <strong>environment</strong> by trial and error using feedback from its own <strong>actions</strong>. Feedback is given in the form of <strong>rewards</strong>.</p>
+</div></div><span></span></div></div></div><div><div class="index--container--2OwOl"><div class="index--atom--lmAIo layout--content--3Smmq"><div><div role="button" tabindex="0" aria-label="Show Image Fullscreen" class="image-atom--image-atom--1XDdu"><div class="image-atom-content--CDPca"><div class="image-and-annotations-container--1U01s"><img class="image--26lOQ" src="./Reinforcement Learning with AWS DeepRacer_files/l3-ml-with-aws-all-together-now.png" alt="In a reinforcement learning model, an agent learns in an interactive real-time environment by trial and error using feedback from its own actions. Feedback is given in the form of rewards." width="600px"></div><div class="caption--2IK-Y"><div class="index-module--markdown--2MdcR ureact-markdown "><p>In a reinforcement learning model, an agent learns in an interactive real-time environment by trial and error using feedback from its own actions. Feedback is given in the form of rewards.</p>
+</div></div></div></div></div><span></span></div></div></div><div><div class="index--container--2OwOl"><div class="index--atom--lmAIo layout--content--3Smmq"><div class="ltr"><div class="index-module--markdown--2MdcR ureact-markdown "><h2 id="putting-your-spin-on-aws-deepracer-the-practitioner-s-role-in-rl">Putting Your Spin on AWS DeepRacer: The Practitioner's Role in RL</h2>
+</div></div><span></span></div></div></div><div><div class="index--container--2OwOl"><div class="index--atom--lmAIo layout--content--3Smmq"><div><div class="video-atom--video--1rflY" style="width: 100%;"><div class="vds-loading vds-loading--md" role="status" aria-label="Loading…"><div class="vds-loading__children"><div class="_1UN_ejel6QzQCa_M5Nn4bu"><div class="_2lGVVA99VY-snhn6dzPP-z"><div class="_3h3jXAJ1HmC2_sa49itKME _2nvHtsDYiD14gMJ8MpUp2c"><div class=""><iframe frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="640" height="360" src="./Reinforcement Learning with AWS DeepRacer_files/Jz20jSP5vdY.html" id="widget22"></iframe></div></div></div></div></div></div></div></div><span></span></div></div></div><div><div class="index--container--2OwOl"><div class="index--atom--lmAIo layout--content--3Smmq"><div class="ltr"><div class="index-module--markdown--2MdcR ureact-markdown "><h2 id="summary">Summary</h2>
+<p>AWS DeepRacer may be autonomous, but you still have an important role to play in the success of your model. In this section, we introduce the<strong> training algorithm, action space, hyperparameters, </strong>and<strong> reward function</strong> and discuss how your ideas make a difference.</p>
+<ul>
+<li>An <em>algorithm</em> is a set of instructions that tells a computer what to do. ML is special because it enables computers to learn without being explicitly programmed to do so.  </li>
+<li>The <em>training algorithm</em> defines your model’s learning objective, which is to maximize total cumulative reward. Different algorithms have different strategies for going about this.<ul>
+<li>A <em>soft actor critic (SAC)</em> embraces exploration and is data-efficient, but can lack stability. </li>
+<li>A <em>proximal policy optimization</em> (PPO) is stable but data-hungry.</li>
+</ul>
+</li>
+<li>An <em>action space</em> is the set of all valid actions, or choices, available to an agent as it interacts with an environment. <ul>
+<li><em>Discrete action space</em> represents all of an agent's possible actions for each state in a finite set of steering angle and throttle value combinations.</li>
+<li><em>Continuous action space</em> allows the agent to select an action from a range of values that you define for each sta te. </li>
+</ul>
+</li>
+<li><em>Hyperparameters</em> are variables that control the performance of your agent during training. There is a variety of different categories with which to experiment. Change the values to increase or decrease the influence of different parts of your model.  <ul>
+<li>For example, the <em>learning rate</em> is a hyperparameter that controls how many new experiences are counted in learning at each step. A higher learning rate results in faster training but may reduce the model’s quality. </li>
+</ul>
+</li>
+<li>The <em>reward function</em>'s purpose is to encourage the agent to reach its goal. Figuring out how to reward which actions is one of your most important jobs.</li>
+</ul>
+</div></div><span></span></div></div></div><div><div class="index--container--2OwOl"><div class="index--atom--lmAIo layout--content--3Smmq"><div class="ltr"><div class="index-module--markdown--2MdcR ureact-markdown "><h2 id="putting-reinforcement-learning-into-action-with-aws-deepracer">Putting Reinforcement Learning into Action with AWS DeepRacer</h2>
+</div></div><span></span></div></div></div><div><div class="index--container--2OwOl"><div class="index--atom--lmAIo layout--content--3Smmq"><div><div class="video-atom--video--1rflY" style="width: 100%;"><div class="vds-loading vds-loading--md" role="status" aria-label="Loading…"><div class="vds-loading__children"><div class="_1UN_ejel6QzQCa_M5Nn4bu"><div class="_2lGVVA99VY-snhn6dzPP-z"><div class="_3h3jXAJ1HmC2_sa49itKME _2nvHtsDYiD14gMJ8MpUp2c"><div class=""><iframe frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="640" height="360" src="./Reinforcement Learning with AWS DeepRacer_files/J3v2c08IxCE.html" id="widget24"></iframe></div></div></div></div></div></div></div></div><span></span></div></div></div><div><div class="index--container--2OwOl"><div class="index--atom--lmAIo layout--content--3Smmq"><div class="ltr"><div class="index-module--markdown--2MdcR ureact-markdown "><h2 id="summary">Summary</h2>
+<p>This video put the concepts we've learned into action by imagining the reward function as a grid mapped over the race track in AWS DeepRacer’s training environment, and visualizing it as metrics plotted on a graph. It also introduced the trade-off between exploration and exploitation, an important challenge unique to this type of machine learning.</p>
+</div></div><span></span></div></div></div><div><div class="index--container--2OwOl"><div class="index--atom--lmAIo layout--content--3Smmq"><div><div role="button" tabindex="0" aria-label="Show Image Fullscreen" class="image-atom--image-atom--1XDdu"><div class="image-atom-content--CDPca"><div class="image-and-annotations-container--1U01s"><img class="image--26lOQ" src="./Reinforcement Learning with AWS DeepRacer_files/screen-shot-2021-04-27-at-3.44.12-pm.png" alt="Each square is a state. The green square is the starting position, or initial state, and the finish line is the goal, or terminal state." width="700px"></div><div class="caption--2IK-Y"><div class="index-module--markdown--2MdcR ureact-markdown "><p>Each square is a state. The green square is the starting position, or initial state, and the finish line is the goal, or terminal state.</p>
+</div></div></div></div></div><span></span></div></div></div><div><div class="index--container--2OwOl"><div class="index--atom--lmAIo layout--content--3Smmq"><div class="ltr"><div class="index-module--markdown--2MdcR ureact-markdown "><p>Key points to remember about <strong>reward functions:</strong></p>
+<ul>
+<li>Each state on the grid is assigned a score by your reward function. You incentivize behavior that supports your car’s goal of completing fast laps by giving the highest numbers to the parts of the track on which you want it to drive.</li>
+<li>The <a href="https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-reward-function-input.html?utm_source=Udacity&amp;utm_medium=Webpage&amp;utm_campaign=Udacity%20AWS%20ML%20Foundations%20Course" target="_blank">reward function</a> is the <a href="https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-reward-function-examples.html?utm_source=Udacity&amp;utm_medium=Webpage&amp;utm_campaign=Udacity%20AWS%20ML%20Foundations%20Course" target="_blank">actual code</a> you'll write to help your agent determine if the action it just took was good or bad, and how good or bad it was.</li>
+</ul>
+</div></div><span></span></div></div></div><div><div class="index--container--2OwOl"><div class="index--atom--lmAIo layout--content--3Smmq"><div><div role="button" tabindex="0" aria-label="Show Image Fullscreen" class="image-atom--image-atom--1XDdu"><div class="image-atom-content--CDPca"><div class="image-and-annotations-container--1U01s"><img class="image--26lOQ" src="./Reinforcement Learning with AWS DeepRacer_files/screen-shot-2021-04-27-at-3.46.11-pm.png" alt="The squares containing exes are the track edges and defined as terminal states, which tell your car it has gone off track. " width="700px"></div><div class="caption--2IK-Y"><div class="index-module--markdown--2MdcR ureact-markdown "><p>The squares containing exes are the track edges and defined as terminal states, which tell your car it has gone off track. </p>
+</div></div></div></div></div><span></span></div></div></div><div><div class="index--container--2OwOl"><div class="index--atom--lmAIo layout--content--3Smmq"><div class="ltr"><div class="index-module--markdown--2MdcR ureact-markdown "><p>Key points to remember about <strong>exploration versus exploitation:</strong> </p>
+<ul>
+<li>When a car first starts out, it <em>explores</em> by wandering in random directions. However, the more training an agent gets, the more it learns about an environment. This experience helps it become more confident about the actions it chooses. </li>
+<li><em>Exploitation </em>means the car begins to exploit or use information from previous experiences to help it reach its goal. Different training algorithms utilize exploration and exploitation differently. </li>
+</ul>
+<p>Key points to remember about the<strong> reward graph:</strong></p>
+<ul>
+<li>While training your car in the AWS DeepRacer console, your training metrics are displayed on a <em>reward graph</em>. </li>
+<li>Plotting the total reward from each episode allows you to see how the model performs over time. The more reward your car gets, the better your model performs.</li>
+</ul>
+<p>Key points to remember about <strong>AWS DeepRacer:</strong></p>
+<ul>
+<li><a href="https://aws.amazon.com/deepracer/?utm_source=Udacity&amp;utm_medium=Webpage&amp;utm_campaign=Udacity%20AWS%20ML%20Foundations%20Course" target="_blank">AWS DeepRacer</a> is a combination of a <a href="https://aws.amazon.com/deepracer/robotics-projects/?utm_source=Udacity&amp;utm_medium=Webpage&amp;utm_campaign=Udacity%20AWS%20ML%20Foundations%20Course" target="_blank">physical car</a> and a <a href="https://console.aws.amazon.com/deepracer/home?region=us-east-1&amp;utm_source=Udacity&amp;utm_medium=Webpage&amp;utm_campaign=Udacity%20AWS%20ML%20Foundations%20Course#createModel" target="_blank">virtual simulator</a> in the <a href="https://aws.amazon.com/console/?utm_source=Udacity&amp;utm_medium=Webpage&amp;utm_campaign=Udacity%20AWS%20ML%20Foundations%20Course" target="_blank">AWS Console</a>, the <a href="https://aws.amazon.com/deepracer/league/?utm_source=Udacity&amp;utm_medium=Webpage&amp;utm_campaign=Udacity%20AWS%20ML%20Foundations%20Course" target="_blank">AWS DeepRacer League</a>, and <a href="https://console.aws.amazon.com/deepracer/home?region=us-east-1&amp;utm_source=Udacity&amp;utm_medium=Webpage&amp;utm_campaign=Udacity%20AWS%20ML%20Foundations%20Course#communityRaces" target="_blank">community races</a>.  </li>
+<li>An AWS DeepRacer device is not required to start learning: you can start now in the AWS console. The 3D simulator in the AWS console is where training and evaluation take place.</li>
+</ul>
+</div></div><span></span></div></div></div><div><div class="index--container--2OwOl"><div class="index--atom--lmAIo layout--content--3Smmq"><div class="ltr"><div class="index-module--markdown--2MdcR ureact-markdown "><h2 id="new-terms">New Terms</h2>
+<ul>
+<li><strong>Exploration versus exploitation:</strong> An agent should exploit known information from previous experiences to achieve higher cumulative rewards, but it also needs to explore to gain new experiences that can be used in choosing the best actions in the future.</li>
+</ul>
+</div></div><span></span></div></div></div><div><div class="index--container--2OwOl"><div class="index--atom--lmAIo layout--content--3Smmq"><div class="ltr"><div class="index-module--markdown--2MdcR ureact-markdown "><h2 id="additional-reading">Additional Reading</h2>
+<ul>
+<li>If you are interested in more tips, workshops, classes, and other resources for improving your model, you'll find a wealth of resources on the <a href="https://aws.amazon.com/deepracer/racing-tips/?utm_source=Udacity&amp;utm_medium=Webpage&amp;utm_campaign=Udacity%20AWS%20ML%20Foundations%20Course" target="_blank">AWS DeepRacer Pit Stop</a> page. </li>
+<li>For detailed step-by-step instructions and troubleshooting support, see the <a href="https://docs.aws.amazon.com/deepracer/index.html?utm_source=Udacity&amp;utm_medium=Webpage&amp;utm_campaign=Udacity%20AWS%20ML%20Foundations%20Course" target="_blank">AWS DeepRacer Developer Documentation</a>.</li>
+<li>If you're interested in reading more posts on a range of DeepRacer topics as well as staying up to date on the newest releases, check out the <a href="https://forums.aws.amazon.com/forum.jspa?forumID=318&amp;utm_source=Udacity&amp;utm_medium=Webpage&amp;utm_campaign=Udacity%20AWS%20ML%20Foundations%20Course" target="_blank">AWS Discussion Forums</a>.</li>
+<li>If you're interested in connecting with a thriving global community of reinforcement learning racing enthusiasts, join the <a href="http://join.deepracing.io/?utm_source=Udacity&amp;utm_medium=Webpage&amp;utm_campaign=Udacity%20AWS%20ML%20Foundations%20Course" target="_blank">AWS DeepRacer Slack community</a>. </li>
+<li>If you're interested in tinkering with <a href="https://aws.amazon.com/deepracer/robotics-projects/?utm_source=Udacity&amp;utm_medium=Webpage&amp;utm_campaign=Udacity%20AWS%20ML%20Foundations%20Course" target="_blank">DeepRacer's open-source device software</a> and collaborating with robotics innovators, check out our <a href="https://github.com/aws-deepracer?utm_source=Udacity&amp;utm_medium=Webpage&amp;utm_campaign=Udacity%20AWS%20ML%20Foundations%20Course" target="_blank">AWS DeepRacer GitHub Organization</a>.</li>
+</ul>
+</div></div><span></span></div></div></div></div><div><div class="_main--footer-container--3vC-_"><button class="vds-button vds-button--secondary" type="button"><span class="vds-button__content">Siguiente</span></button></div></div><noscript></noscript><noscript></noscript></div></div></div></main></div></div></div></div></div></div></div>;</div><script src="./Reinforcement Learning with AWS DeepRacer_files/vendors_app.6eaac.js"></script><script src="./Reinforcement Learning with AWS DeepRacer_files/app.fbf82.js"></script><iframe id="intercom-frame" style="position: absolute !important; opacity: 0 !important; width: 1px !important; height: 1px !important; top: 0 !important; left: 0 !important; border: none !important; display: block !important; z-index: -1 !important; pointer-events: none;" aria-hidden="true" tabindex="-1" title="Intercom" src="./Reinforcement Learning with AWS DeepRacer_files/saved_resource(1).html"></iframe><span id="buffer-extension-hover-button" style="display: none; position: absolute; z-index: 8675309; width: 100px; height: 25px; background-image: url(&quot;chrome-extension://noojglkidnpfjbincgijbaiedldjfbhh/data/shared/img/buffer-hover-icon@2x.png&quot;); background-size: 100px 25px; opacity: 0.9; cursor: pointer; top: 335.398px; left: 886.636px;"></span><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="./Reinforcement Learning with AWS DeepRacer_files/translate_24dp.png" width="20" height="20" alt="Google Traductor de Google"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Texto original</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Sugiere una traducción mejor</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div><div class="intercom-lightweight-app" aria-live="polite"><style id="intercom-lightweight-app-style" type="text/css">
+  @keyframes intercom-lightweight-app-launcher {
+    from {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes intercom-lightweight-app-gradient {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes intercom-lightweight-app-messenger {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .intercom-lightweight-app {
+    position: fixed;
+    z-index: 2147483001;
+    width: 0;
+    height: 0;
+    font-family: intercom-font, "Helvetica Neue", "Apple Color Emoji", Helvetica, Arial, sans-serif;
+  }
+
+  .intercom-lightweight-app-gradient {
+    position: fixed;
+    z-index: 2147483002;
+    width: 500px;
+    height: 500px;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    background: radial-gradient(
+      ellipse at bottom right,
+      rgba(29, 39, 54, 0.16) 0%,
+      rgba(29, 39, 54, 0) 72%);
+    animation: intercom-lightweight-app-gradient 200ms ease-out;
+  }
+
+  .intercom-lightweight-app-launcher {
+    position: fixed;
+    z-index: 2147483003;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #2434ed;
+    cursor: pointer;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.06), 0 2px 32px 0 rgba(0, 0, 0, 0.16);
+    animation: intercom-lightweight-app-launcher 250ms ease;
+  }
+
+  .intercom-lightweight-app-launcher:focus {
+    outline: none;
+    
+  }
+
+  .intercom-lightweight-app-launcher-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    transition: transform 100ms linear, opacity 80ms linear;
+  }
+
+  .intercom-lightweight-app-launcher-icon-open {
+    
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+      
+  }
+
+  .intercom-lightweight-app-launcher-icon-open svg {
+    width: 28px;
+    height: 32px;
+  }
+
+  .intercom-lightweight-app-launcher-icon-open svg path {
+    fill: rgb(255, 255, 255);
+  }
+
+  .intercom-lightweight-app-launcher-icon-self-serve {
+    
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+      
+  }
+
+  .intercom-lightweight-app-launcher-icon-self-serve svg {
+    height: 56px;
+  }
+
+  .intercom-lightweight-app-launcher-icon-self-serve svg path {
+    fill: rgb(255, 255, 255);
+  }
+
+  .intercom-lightweight-app-launcher-custom-icon-open {
+    max-height: 36px;
+    max-width: 36px;
+    
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+      
+  }
+
+  .intercom-lightweight-app-launcher-icon-minimize {
+    
+        opacity: 0;
+        transform: rotate(-60deg) scale(0);
+      
+  }
+
+  .intercom-lightweight-app-launcher-icon-minimize svg {
+    width: 16px;
+  }
+
+  .intercom-lightweight-app-launcher-icon-minimize svg path {
+    fill: rgb(255, 255, 255);
+  }
+
+  .intercom-lightweight-app-messenger {
+    position: fixed;
+    z-index: 2147483003;
+    overflow: hidden;
+    background-color: white;
+    animation: intercom-lightweight-app-messenger 250ms ease-out;
+    
+        width: 376px;
+        height: calc(100% - 40px);
+        max-height: 704px;
+        min-height: 250px;
+        right: 20px;
+        bottom: 20px;
+        box-shadow: 0 5px 40px rgba(0,0,0,0.16);
+        border-radius: 8px;
+      
+  }
+
+  .intercom-lightweight-app-messenger-header {
+    height: 75px;
+    background: linear-gradient(
+      135deg,
+      rgb(36, 153, 237) 0%,
+      rgb(13, 97, 158) 100%
+    );
+  }
+
+  @media print {
+    .intercom-lightweight-app {
+      display: none;
+    }
+  }
+</style></div><div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div></body></html>
